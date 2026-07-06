@@ -1,26 +1,167 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* ===== DARK NEXUS — Theme Variables ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #050508;
+  --bg-secondary: #0a0a14;
+  --bg-card: #0d0d1a;
+  --bg-card-hover: #12122a;
+  --border: #1a1a3a;
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --cyan: #00fff2;
+  --cyan-dim: rgba(0, 255, 242, 0.3);
+  --red: #ff0040;
+  --red-dim: rgba(255, 0, 64, 0.3);
+  --magenta: #b000ff;
+  --green: #00ff88;
+  --amber: #ffaa00;
+  --text-primary: #e8e8f0;
+  --text-secondary: #8888aa;
+  --text-muted: #55557a;
+  --rad: 8px;
+  --glow-cyan: 0 0 7px rgba(0, 255, 242, 0.6), 0 0 20px rgba(0, 255, 242, 0.3);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme='dim'] {
+  --bg-primary: #08081a;
+  --bg-secondary: #0e0e24;
+  --bg-card: #12122a;
+  --bg-card-hover: #18183a;
+  --border: #22224a;
+  --cyan: #00ccbb;
+  --cyan-dim: rgba(0, 204, 187, 0.25);
+  --red: #cc0040;
+  --green: #00cc66;
+  --text-primary: #c8c8e0;
+  --text-secondary: #6a6a8a;
+  --text-muted: #4a4a6a;
+  --glow-cyan: 0 0 5px rgba(0, 204, 187, 0.4), 0 0 12px rgba(0, 204, 187, 0.15);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===== Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-primary);
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ===== Grid Overlay ===== */
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 242, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 242, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+  animation: gridScroll 8s linear infinite;
+}
+
+@keyframes gridScroll {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(40px, 40px); }
+}
+
+/* ===== Scanlines ===== */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 242, 0.008) 2px,
+    rgba(0, 255, 242, 0.008) 4px
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ===== Glitch overlay ===== */
+.glitch-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 64, 0.02) 0%,
+    transparent 2%,
+    transparent 98%,
+    rgba(0, 255, 242, 0.02) 100%
+  );
+  animation: glitchFlicker 4s infinite;
+}
+
+@keyframes glitchFlicker {
+  0%, 95%, 100% { opacity: 1; }
+  96% { opacity: 0.4; }
+  97% { opacity: 1; }
+  98% { opacity: 0.6; }
+}
+
+/* ===== Glass Effect ===== */
+.glass {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 242, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 242, 0.3);
+}
+
+/* ===== Card hover ===== */
+.card-hover {
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* ===== Utilities ===== */
+.font-orbitron {
+  font-family: var(--font-orbitron, 'Orbitron', sans-serif);
+}
+.font-mono {
+  font-family: var(--font-jetbrains-mono, 'JetBrains Mono', monospace);
+}
+.glow-cyan {
+  text-shadow: 0 0 7px rgba(0, 255, 242, 0.6), 0 0 20px rgba(0, 255, 242, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #00fff2, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
