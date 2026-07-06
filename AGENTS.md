@@ -1,5 +1,21 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# niu-dash-fullstack — Next.js 16 Fullstack Dashboard
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+**Path:** `projects/niu-dash-fullstack/`
+**GitHub:** `github.com/Niumination/niu-dash-fullstack`
+**Stack:** Next.js 16, React 19, TypeScript, Tailwind v4, Prisma 7, Three.js, TanStack Query, next-auth, Zustand, Framer Motion
+
+## Status
+- ✅ Git initialized & pushed ke GitHub (06 Jul 2026)
+- 🟡 **Active** — dalam pengembangan
+- ⚪ Deployment: belum
+
+## Struktur
+- `app/` — Next.js App Router (pages, layout, API routes)
+- `prisma/` — Database schema & migrations
+- `scripts/` — Deploy scripts
+- `public/` — Static assets
+
+## Catatan
+- `.env` di .gitignore — jangan commit
+- Prisma generate output di `app/generated/prisma/` — di-ignore
+- Next.js 16 — cek `node_modules/next/dist/docs/` untuk API terbaru
