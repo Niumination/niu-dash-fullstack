@@ -1,7 +1,9 @@
 'use client'
 
-import { useTheme } from '@/components/ThemeProvider'
 import { useState, useMemo } from 'react'
+import { useZenStore } from '@/store/useZenStore'
+import FloatingCard from '@/components/ui/FloatingCard'
+import { cn } from '@/lib/utils'
 import type { Project, Category } from '@/lib/types'
 
 interface Props {
@@ -10,8 +12,7 @@ interface Props {
 }
 
 export default function DashboardClient({ projects, stats }: Props) {
-  const { theme, toggleTheme } = useTheme()
-  const [page, setPage] = useState<'dashboard' | 'projects' | 'ecosystem' | 'released' | 'settings'>('dashboard')
+  const activeRoute = useZenStore((s) => s.activeRoute)
   const [search, setSearch] = useState('')
   const [catFilter, setCatFilter] = useState<Category | 'all'>('all')
   const [sort, setSort] = useState<'newest' | 'oldest' | 'az'>('newest')
@@ -22,136 +23,48 @@ export default function DashboardClient({ projects, stats }: Props) {
   const readyCount = stats.ready || 0
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Sidebar */}
-      <Sidebar page={page} setPage={setPage} theme={theme} toggleTheme={toggleTheme} />
+    <>
+      {activeRoute === 'dashboard' && (
+        <DashboardView
+          projects={projects}
+          stats={stats}
+          total={total}
+          githubRepos={githubRepos}
+          devCount={devCount}
+          readyCount={readyCount}
+        />
+      )}
 
-      {/* Main */}
-      <main className="ml-[220px] flex-1">
-        <Header projects={projects} />
+      {activeRoute === 'projects' && (
+        <ProjectsView
+          projects={projects}
+          search={search}
+          setSearch={setSearch}
+          catFilter={catFilter}
+          setCatFilter={setCatFilter}
+          sort={sort}
+          setSort={setSort}
+        />
+      )}
 
-        {page === 'dashboard' && (
-          <DashboardView
-            projects={projects}
-            stats={stats}
-            total={total}
-            githubRepos={githubRepos}
-            devCount={devCount}
-            readyCount={readyCount}
-          />
-        )}
-
-        {page === 'projects' && (
-          <ProjectsView
-            projects={projects}
-            search={search}
-            setSearch={setSearch}
-            catFilter={catFilter}
-            setCatFilter={setCatFilter}
-            sort={sort}
-            setSort={setSort}
-          />
-        )}
-
-        {page === 'ecosystem' && <EcosystemView projects={projects} />}
-        {page === 'released' && <ReleasedView projects={projects} />}
-      </main>
-    </div>
+      {activeRoute === 'ecosystem' && <EcosystemView projects={projects} />}
+      {activeRoute === 'released' && <ReleasedView projects={projects} />}
+      {activeRoute === 'settings' && <SettingsView />}
+    </>
   )
 }
 
-// ===== Sidebar =====
-function Sidebar({
-  page,
-  setPage,
-  theme,
-  toggleTheme,
-}: {
-  page: string
-  setPage: (p: any) => void
-  theme: string
-  toggleTheme: () => void
-}) {
-  const nav = [
-    { key: 'dashboard', icon: '◈', label: 'Dashboard' },
-    { key: 'projects', icon: '⊞', label: 'Projects' },
-    { key: 'ecosystem', icon: '⟁', label: 'Ecosystem' },
-    { key: 'released', icon: '⏣', label: 'Released' },
-    { key: 'settings', icon: '⚙', label: 'Settings' },
-  ] as const
-
+// ===== Settings View =====
+function SettingsView() {
   return (
-    <aside className="fixed left-0 top-0 bottom-0 w-[220px] z-20 flex flex-col border-r border-[var(--border)] bg-[rgba(5,5,8,.95)] backdrop-blur-2xl">
-      <div className="flex items-center gap-2 px-5 py-5 border-b border-[var(--border-subtle)]">
-        <span className="text-lg font-bold font-orbitron bg-gradient-to-r from-[#00fff2] to-[#c084fc] bg-clip-text text-transparent">
-          NIU
-        </span>
-        <span className="text-lg font-bold font-orbitron text-[var(--red)]">⚡</span>
-        <span className="text-lg font-bold font-orbitron bg-gradient-to-r from-[#00fff2] to-[#c084fc] bg-clip-text text-transparent">
-          DASH
-        </span>
-      </div>
-
-      <nav className="flex-1 px-3 py-4 space-y-1">
-        {nav.map((item) => (
-          <button
-            key={item.key}
-            onClick={() => setPage(item.key)}
-            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-sm transition-all font-mono ${
-              page === item.key
-                ? 'bg-[rgba(0,255,242,.12)] border border-[var(--cyan)] text-[var(--cyan)] shadow-[inset_0_0_20px_rgba(0,255,242,.06)]'
-                : 'text-[var(--text-secondary)] hover:bg-[rgba(0,255,242,.06)] hover:text-[var(--text-primary)] border border-transparent'
-            }`}
-          >
-            <span className="text-xs w-4 text-center">{item.icon}</span>
-            <span>{item.label}</span>
-            {page === item.key && (
-              <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[var(--cyan)] shadow-[0_0_6px_rgba(0,255,242,.6)]" />
-            )}
-          </button>
-        ))}
-      </nav>
-
-      <div className="px-3 py-4 border-t border-[var(--border-subtle)]">
-        <button
-          onClick={toggleTheme}
-          className="w-full flex items-center gap-2 px-3 py-2 rounded text-xs font-mono text-[var(--text-muted)] hover:bg-[rgba(0,255,242,.06)] hover:text-[var(--text-secondary)] transition-all"
-        >
-          <span>{theme === 'dark' ? '☀' : '☾'}</span>
-          <span>{theme === 'dark' ? 'CYBER DIM' : 'DARK NEXUS'}</span>
-        </button>
-      </div>
-    </aside>
-  )
-}
-
-// ===== Header =====
-function Header({ projects }: { projects: Project[] }) {
-  const latest = projects.sort((a, b) => {
-    const da = parseDateValue(a.date)
-    const db = parseDateValue(b.date)
-    return db - da
-  })[0]
-
-  return (
-    <header className="sticky top-0 z-20 h-14 flex items-center px-8 border-b border-[var(--border)] bg-[rgba(5,5,8,.85)] backdrop-blur-2xl">
-      <div className="flex items-center gap-4">
-        <span className="text-xs font-mono text-[var(--text-muted)] tracking-widest uppercase">
-          Nexus Terminal
-        </span>
-        <span className="w-px h-4 bg-[var(--border)]" />
-        <span className="text-xs font-mono text-[var(--cyan)]" suppressHydrationWarning>
-          {new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Asia/Jakarta' })}
-        </span>
-        <span className="w-px h-4 bg-[var(--border)]" />
-        <span className="text-[10px] font-mono text-[var(--text-muted)]">
-          Latest: {latest?.name || '—'} · {latest?.date || ''}
-        </span>
-      </div>
-      <div className="ml-auto flex items-center gap-3">
-        <StatusDot label="ALL SYSTEMS" color="var(--green)" />
-      </div>
-    </header>
+    <section className="px-6 pt-4">
+      <h2 className="font-jp text-2xl font-light tracking-wide text-bg-washi">
+        設定
+      </h2>
+      <p className="mt-2 text-sm text-stone-gray">
+        Settings panel — configure dashboard preferences and data sources.
+      </p>
+    </section>
   )
 }
 
@@ -178,29 +91,29 @@ function DashboardView({
   return (
     <>
       {/* Hero */}
-      <section className="relative px-8 pt-20 pb-16">
+      <section className="relative px-6 pt-4 pb-8">
         <div className="max-w-4xl">
-          <h1 className="font-orbitron text-5xl font-bold tracking-tight">
-            <span className="text-gradient">DARK NEXUS</span>
+          <h1 className="font-jp text-4xl font-light tracking-wide text-bg-washi">
+            Zen Studio
           </h1>
-          <p className="mt-4 text-sm font-mono text-[var(--text-secondary)] max-w-xl leading-relaxed">
+          <p className="mt-2 text-sm text-stone-gray max-w-xl leading-relaxed">
             Project portfolio dashboard. {total} proyek terinventarisasi dengan live
             GitHub stats, auto-detection, dan DEV TRACKER.
           </p>
-          <div className="mt-8 flex items-center gap-4">
-            <div className="flex items-center gap-2 px-4 py-2 rounded border border-[var(--border)] bg-[rgba(0,255,242,.04)]">
-              <span className="w-2 h-2 rounded-full bg-[var(--green)] shadow-[0_0_6px_rgba(0,255,136,.5)]" />
-              <span className="text-xs font-mono text-[var(--text-secondary)]">LIVE</span>
+          <div className="mt-6 flex items-center gap-4">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-xl glass-strong">
+              <span className="h-2 w-2 rounded-full bg-matcha-glow shadow-[0_0_8px_rgba(143,179,129,0.5)]" />
+              <span className="text-xs font-mono text-stone-gray">LIVE</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded border border-[var(--border)] text-xs font-mono text-[var(--text-muted)]">
-              v3.1
+            <div className="rounded-xl glass-strong px-4 py-2 text-xs font-mono text-stone-gray">
+              v3.1 · Zen Studio
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Grid */}
-      <section className="px-8 pb-8">
+      <section className="px-6 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <StatCard label="Total Projects" value={String(total)} />
           <StatCard label="GitHub Tracked" value={String(githubRepos)} />
@@ -209,39 +122,35 @@ function DashboardView({
         </div>
       </section>
 
-      {/* Detailed Stats Row */}
-      <section className="px-8 pb-8">
-        <h2 className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-4">
-          ⟐ Per Category
+      {/* Per Category */}
+      <section className="px-6 pb-8">
+        <h2 className="text-xs font-medium tracking-widest uppercase text-stone-gray/60 mb-4 font-mono">
+          ◇ Per Category
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          {[
-            { key: 'ready', label: '⚡ Ready', count: stats.ready || 0 },
-            { key: 'dev', label: '⟐ Development', count: stats.dev || 0 },
-            { key: 'ideas', label: '◇ Ideas/Plan', count: stats.ideas || 0 },
-            { key: 'config', label: '⚙ Config/Dots', count: stats.config || 0 },
-            { key: 'legacy', label: '◫ Legacy', count: stats.legacy || 0 },
-          ].map((cat) => (
-            <div
-              key={cat.key}
-              className="glass rounded-[var(--rad)] p-4 flex items-center justify-between transition-all duration-300 hover:border-[var(--cyan)]"
-            >
-              <span className="text-xs font-mono text-[var(--text-secondary)]">{cat.label}</span>
-              <span className="text-lg font-bold font-orbitron text-gradient">{cat.count}</span>
-            </div>
-          ))}
+          {categories.map((cat) => {
+            const count = stats[cat.key] || 0
+            return (
+              <FloatingCard key={cat.key} glowColor={cat.glow} className="h-full" enableTilt={false}>
+                <div className="flex items-center justify-between p-4">
+                  <span className="text-xs font-mono text-stone-gray">{cat.label}</span>
+                  <span className={cn("text-lg font-semibold", cat.textClass)}>{count}</span>
+                </div>
+              </FloatingCard>
+            )
+          })}
         </div>
-        <div className="mt-3 glass rounded-[var(--rad)] p-4 flex items-center justify-between">
-          <span className="text-xs font-mono text-[var(--text-secondary)]">
-            Active Development <span className="text-[var(--green)]">⬤</span>
+        <div className="mt-3 glass-card rounded-2xl flex items-center justify-between px-5 py-4">
+          <span className="text-xs font-mono text-stone-gray">
+            Active Development <span className="text-matcha-glow">⬤</span>
           </span>
-          <span className="text-lg font-bold font-orbitron text-gradient">{activeDev}</span>
+          <span className="text-lg font-semibold text-bg-washi">{activeDev}</span>
         </div>
       </section>
 
       {/* Latest Projects */}
-      <section className="px-8 pb-8">
-        <h2 className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-4">
+      <section className="px-6 pb-8">
+        <h2 className="text-xs font-medium tracking-widest uppercase text-stone-gray/60 mb-4 font-mono">
           ◈ Latest Projects
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -252,18 +161,18 @@ function DashboardView({
       </section>
 
       {/* Tag Cloud */}
-      <section className="px-8 pb-20">
-        <h2 className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-4">
+      <section className="px-6 pb-12">
+        <h2 className="text-xs font-medium tracking-widest uppercase text-stone-gray/60 mb-4 font-mono">
           ◇ Technology Tags
         </h2>
         <div className="flex flex-wrap gap-2">
           {tagCloud.slice(0, 40).map((t) => (
             <span
               key={t.tag}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] font-mono bg-[rgba(0,255,242,.06)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[rgba(0,255,242,.12)] hover:text-[var(--cyan)] transition-all"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono glass-strong text-stone-gray hover:text-bg-washi transition-colors"
             >
               {t.tag}
-              <span className="text-[10px] text-[var(--text-muted)]">{t.count}</span>
+              <span className="text-[10px] text-white/30">{t.count}</span>
             </span>
           ))}
         </div>
@@ -319,52 +228,50 @@ function ProjectsView({
 
   return (
     <>
-      <section className="relative px-8 pt-12 pb-8">
-        <h1 className="font-orbitron text-3xl font-bold">
-          <span className="text-gradient">⟐ PROJECT FEED</span>
+      <section className="px-6 pt-4 pb-6">
+        <h1 className="font-jp text-3xl font-light tracking-wide text-bg-washi">
+          プロジェクト
         </h1>
-        <p className="mt-2 text-xs font-mono text-[var(--text-muted)]">
+        <p className="mt-1 text-sm text-stone-gray">
           {displayed.length} of {projects.length} projects visible
         </p>
       </section>
 
       {/* Controls */}
-      <section className="px-8 pb-6">
+      <section className="px-6 pb-6">
         <div className="flex flex-wrap items-center gap-3">
-          {/* Search */}
           <div className="relative flex-1 min-w-[200px] max-w-sm">
             <input
               type="text"
               placeholder="Search projects..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full px-3 py-2 pl-8 rounded border border-[var(--border)] bg-[rgba(5,5,8,.6)] text-sm font-mono text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--cyan)] transition-all"
+              className="w-full px-3 py-2 pl-8 rounded-xl glass-strong text-sm font-mono text-bg-washi placeholder:text-stone-gray/50 focus:outline-none focus:ring-1 focus:ring-matcha-glow/30 transition-all"
             />
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)] text-xs">⌕</span>
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-gray/50 text-xs">⌕</span>
           </div>
 
-          {/* Category Pills */}
           <div className="flex flex-wrap gap-2">
             {cats.map((c) => (
               <button
                 key={c.key}
                 onClick={() => setCatFilter(c.key)}
-                className={`px-3 py-1.5 rounded text-xs font-mono transition-all ${
+                className={cn(
+                  "px-3 py-1.5 rounded-xl text-xs font-mono transition-all",
                   catFilter === c.key
-                    ? 'bg-[rgba(0,255,242,.12)] border border-[var(--cyan)] text-[var(--cyan)]'
-                    : 'bg-[rgba(5,5,8,.4)] border border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--text-muted)]'
-                }`}
+                    ? "glass-strong text-matcha-glow"
+                    : "text-stone-gray hover:text-bg-washi hover:bg-white/[0.04]"
+                )}
               >
                 {c.label}
               </button>
             ))}
           </div>
 
-          {/* Sort */}
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value)}
-            className="px-3 py-1.5 rounded text-xs font-mono bg-[rgba(5,5,8,.6)] border border-[var(--border)] text-[var(--text-secondary)] focus:outline-none focus:border-[var(--cyan)]"
+            className="px-3 py-1.5 rounded-xl text-xs font-mono glass-strong text-stone-gray focus:outline-none focus:ring-1 focus:ring-matcha-glow/30"
           >
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
@@ -374,11 +281,11 @@ function ProjectsView({
       </section>
 
       {/* Feed */}
-      <section className="px-8 pb-20">
+      <section className="px-6 pb-12">
         {displayed.length === 0 ? (
           <div className="text-center py-20">
             <div className="text-4xl mb-4 opacity-30">⏳</div>
-            <p className="text-sm font-mono text-[var(--text-muted)]">No projects match your criteria</p>
+            <p className="text-sm font-mono text-stone-gray">No projects match your criteria</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -404,27 +311,27 @@ function EcosystemView({ projects }: { projects: Project[] }) {
 
   return (
     <>
-      <section className="relative px-8 pt-12 pb-8">
-        <h1 className="font-orbitron text-3xl font-bold">
-          <span className="text-gradient">⟁ ECOSYSTEM</span>
+      <section className="px-6 pt-4 pb-6">
+        <h1 className="font-jp text-3xl font-light tracking-wide text-bg-washi">
+          生態系
         </h1>
-        <p className="mt-2 text-xs font-mono text-[var(--text-muted)]">
+        <p className="mt-1 text-sm text-stone-gray">
           {devProjects.length} development projects · {devProjects.filter((p) => p.status === 'active').length} active
         </p>
       </section>
 
-      <section className="px-8 pb-8">
+      <section className="px-6 pb-12">
         {byStatus.active.length > 0 && (
-          <EcoSection title="⟐ Active" projects={byStatus.active} color="var(--green)" />
+          <EcoSection title="⟐ Active" projects={byStatus.active} color="text-matcha-glow" />
         )}
         {byStatus.staging.length > 0 && (
-          <EcoSection title="⟐ Staging" projects={byStatus.staging} color="var(--amber)" />
+          <EcoSection title="⟐ Staging" projects={byStatus.staging} color="text-amber-400" />
         )}
         {byStatus.paused.length > 0 && (
-          <EcoSection title="⟐ Paused" projects={byStatus.paused} color="var(--text-muted)" />
+          <EcoSection title="⟐ Paused" projects={byStatus.paused} color="text-stone-gray" />
         )}
         {byStatus.noStatus.length > 0 && (
-          <EcoSection title="⟐ Unclassified" projects={byStatus.noStatus} color="var(--text-muted)" />
+          <EcoSection title="⟐ Unclassified" projects={byStatus.noStatus} color="text-stone-gray/60" />
         )}
       </section>
     </>
@@ -434,30 +341,29 @@ function EcosystemView({ projects }: { projects: Project[] }) {
 function EcoSection({ title, projects, color }: { title: string; projects: Project[]; color: string }) {
   return (
     <div className="mb-8">
-      <h2 className="text-xs font-mono uppercase tracking-widest mb-3" style={{ color }}>
-        {title} <span className="text-[var(--text-muted)]">({projects.length})</span>
+      <h2 className={cn("text-xs font-mono uppercase tracking-widest mb-3", color)}>
+        {title} <span className="text-stone-gray/50">({projects.length})</span>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {projects.map((p) => (
-          <div
-            key={p.name}
-            className="glass rounded-[var(--rad)] p-4 transition-all duration-300 hover:border-[var(--cyan)]"
-          >
-            <div className="flex items-center gap-2">
-              <span>{p.icon}</span>
-              <h3 className="text-sm font-mono font-bold text-[var(--text-primary)] truncate">{p.name}</h3>
-            </div>
-            <p className="mt-2 text-xs font-mono text-[var(--text-secondary)] line-clamp-2">{p.desc}</p>
-            {p.tags && (
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {p.tags.slice(0, 4).map((t) => (
-                  <span key={t} className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[rgba(0,255,242,.06)] border border-[var(--border)] text-[var(--text-muted)]">
-                    {t}
-                  </span>
-                ))}
+          <FloatingCard key={p.name} glowColor="matcha" enableTilt={false} className="h-full">
+            <div className="p-4">
+              <div className="flex items-center gap-2">
+                <span>{p.icon}</span>
+                <h3 className="text-sm font-mono font-semibold text-bg-washi truncate">{p.name}</h3>
               </div>
-            )}
-          </div>
+              <p className="mt-2 text-xs font-mono text-stone-gray/80 line-clamp-2">{p.desc}</p>
+              {p.tags && (
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {p.tags.slice(0, 4).map((t) => (
+                    <span key={t} className="text-[10px] font-mono px-1.5 py-0.5 rounded-lg glass-strong text-stone-gray">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </FloatingCard>
         ))}
       </div>
     </div>
@@ -475,55 +381,54 @@ function ReleasedView({ projects }: { projects: Project[] }) {
 
   return (
     <>
-      <section className="relative px-8 pt-12 pb-8">
-        <h1 className="font-orbitron text-3xl font-bold">
-          <span className="text-gradient">⏣ RELEASED</span>
+      <section className="px-6 pt-4 pb-6">
+        <h1 className="font-jp text-3xl font-light tracking-wide text-bg-washi">
+          リリース
         </h1>
-        <p className="mt-2 text-xs font-mono text-[var(--text-muted)]">
+        <p className="mt-1 text-sm text-stone-gray">
           {released.length} deployed/shipped projects
         </p>
       </section>
 
-      <section className="px-8 pb-20">
+      <section className="px-6 pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {ghReady.map((p) => (
-            <div
-              key={p.name}
-              className="glass rounded-[var(--rad)] p-4 transition-all duration-300 hover:border-[var(--cyan)]"
-            >
-              <div className="flex items-center gap-2">
-                <span>{p.icon}</span>
-                <h3 className="text-sm font-mono font-bold text-[var(--text-primary)] truncate">{p.name}</h3>
+            <FloatingCard key={p.name} glowColor="tokyo" enableTilt={false} className="h-full">
+              <div className="p-4">
+                <div className="flex items-center gap-2">
+                  <span>{p.icon}</span>
+                  <h3 className="text-sm font-mono font-semibold text-bg-washi truncate">{p.name}</h3>
+                </div>
+                <p className="mt-2 text-xs font-mono text-stone-gray/80 line-clamp-2">{p.desc}</p>
+                <div className="mt-3 flex items-center gap-2">
+                  {p.website && (
+                    <a
+                      href={p.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-mono text-neon-tokyo hover:underline"
+                    >
+                      🌐 {new URL(p.website).hostname}
+                    </a>
+                  )}
+                  {p.repoName && (
+                    <a
+                      href={`https://github.com/Niumination/${p.repoName}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-mono text-stone-gray hover:text-bg-washi transition-colors"
+                    >
+                      ⎇ repo
+                    </a>
+                  )}
+                </div>
+                <div className="mt-2 flex items-center gap-2 text-[10px] font-mono text-stone-gray/60">
+                  <span>{p.date}</span>
+                  <span>·</span>
+                  <span className="text-matcha-glow">● ready</span>
+                </div>
               </div>
-              <p className="mt-2 text-xs font-mono text-[var(--text-secondary)] line-clamp-2">{p.desc}</p>
-              <div className="mt-3 flex items-center gap-2">
-                {p.website && (
-                  <a
-                    href={p.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[11px] font-mono text-[var(--cyan)] hover:underline"
-                  >
-                    🌐 {new URL(p.website).hostname}
-                  </a>
-                )}
-                {p.repoName && (
-                  <a
-                    href={`https://github.com/Niumination/${p.repoName}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[11px] font-mono text-[var(--text-muted)] hover:text-[var(--cyan)]"
-                  >
-                    ⎇ repo
-                  </a>
-                )}
-              </div>
-              <div className="mt-2 flex items-center gap-2 text-[10px] font-mono text-[var(--text-muted)]">
-                <span>{p.date}</span>
-                <span>·</span>
-                <span className="text-[var(--green)]">● ready</span>
-              </div>
-            </div>
+            </FloatingCard>
           ))}
         </div>
       </section>
@@ -532,79 +437,73 @@ function ReleasedView({ projects }: { projects: Project[] }) {
 }
 
 // ===== Shared Components =====
-
 function ProjectCard({ project, detailed = false }: { project: Project; detailed?: boolean }) {
   const p = project
   return (
-    <div className="glass rounded-[var(--rad)] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,.4)] hover:border-[var(--cyan)] group">
-      <div className="flex items-center gap-2">
-        <span>{p.icon}</span>
-        <h3 className="text-sm font-mono font-bold text-[var(--text-primary)] truncate group-hover:text-[var(--cyan)] transition-colors">
-          {p.name}
-        </h3>
-        {p.status && (
-          <span
-            className={`ml-auto text-[10px] font-mono px-1.5 py-0.5 rounded ${
-              p.status === 'active'
-                ? 'bg-[rgba(0,255,136,.1)] text-[var(--green)]'
-                : p.status === 'staging'
-                  ? 'bg-[rgba(255,200,0,.1)] text-[var(--amber)]'
-                  : 'bg-[rgba(255,255,255,.05)] text-[var(--text-muted)]'
-            }`}
-          >
-            {p.status}
-          </span>
-        )}
-      </div>
-      <p className="mt-2 text-xs font-mono text-[var(--text-secondary)] line-clamp-2 leading-relaxed">
-        {p.desc}
-      </p>
-      <div className="mt-3 flex items-center justify-between">
-        <div className="flex flex-wrap gap-1.5">
-          {p.tags.slice(0, 3).map((t) => (
+    <FloatingCard glowColor="indigo" enableTilt={false} className="h-full group">
+      <div className="p-4">
+        <div className="flex items-center gap-2">
+          <span>{p.icon}</span>
+          <h3 className="text-sm font-mono font-semibold text-bg-washi truncate group-hover:text-matcha-glow transition-colors">
+            {p.name}
+          </h3>
+          {p.status && (
             <span
-              key={t}
-              className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[rgba(0,255,242,.06)] border border-[var(--border)] text-[var(--text-muted)]"
+              className={cn(
+                "ml-auto text-[10px] font-mono px-1.5 py-0.5 rounded-lg",
+                p.status === 'active' && "bg-matcha/10 text-matcha-glow",
+                p.status === 'staging' && "bg-amber-500/10 text-amber-400",
+                p.status === 'paused' && "bg-white/[0.05] text-stone-gray",
+              )}
             >
-              {t}
+              {p.status}
             </span>
-          ))}
-          {p.tags.length > 3 && (
-            <span className="text-[10px] font-mono text-[var(--text-muted)]">+{p.tags.length - 3}</span>
           )}
         </div>
-        <span className="text-[10px] font-mono text-[var(--text-muted)] whitespace-nowrap ml-2">
-          {p.category !== 'dev' && (
-            <span className={`text-[10px] font-mono ${
-              p.category === 'ready' ? 'text-[var(--green)]' : 'text-[var(--text-muted)]'
-            }`}>
-              {p.categoryLabel}
-            </span>
-          )}
-        </span>
+        <p className="mt-2 text-xs font-mono text-stone-gray/80 line-clamp-2 leading-relaxed">
+          {p.desc}
+        </p>
+        <div className="mt-3 flex items-center justify-between">
+          <div className="flex flex-wrap gap-1.5">
+            {p.tags.slice(0, 3).map((t) => (
+              <span
+                key={t}
+                className="text-[10px] font-mono px-1.5 py-0.5 rounded-lg glass-strong text-stone-gray"
+              >
+                {t}
+              </span>
+            ))}
+            {p.tags.length > 3 && (
+              <span className="text-[10px] font-mono text-stone-gray/60">+{p.tags.length - 3}</span>
+            )}
+          </div>
+          <span className="text-[10px] font-mono text-stone-gray/60 whitespace-nowrap ml-2">
+            {p.category !== 'dev' && (
+              <span className={cn(
+                "text-[10px] font-mono",
+                p.category === 'ready' ? 'text-matcha-glow' : 'text-stone-gray/60'
+              )}>
+                {p.categoryLabel}
+              </span>
+            )}
+          </span>
+        </div>
+        {detailed && p.date && (
+          <div className="mt-2 text-[10px] font-mono text-stone-gray/60">{p.date}</div>
+        )}
       </div>
-      {detailed && p.date && (
-        <div className="mt-2 text-[10px] font-mono text-[var(--text-muted)]">{p.date}</div>
-      )}
-    </div>
+    </FloatingCard>
   )
 }
 
 function StatCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="glass rounded-[var(--rad)] p-5 card-hover transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,.4)] hover:border-[var(--cyan)]">
-      <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">{label}</div>
-      <div className="mt-2 text-2xl font-bold font-orbitron text-gradient">{value}</div>
-    </div>
-  )
-}
-
-function StatusDot({ label, color }: { label: string; color: string }) {
-  return (
-    <div className="flex items-center gap-2">
-      <span className="w-1.5 h-1.5 rounded-full" style={{ background: color, boxShadow: `0 0 6px ${color}` }} />
-      <span className="text-[10px] font-mono text-[var(--text-muted)] tracking-wider">{label}</span>
-    </div>
+    <FloatingCard glowColor="tokyo" enableTilt={false} className="h-full">
+      <div className="p-5">
+        <div className="text-xs font-mono text-stone-gray uppercase tracking-wider">{label}</div>
+        <div className="mt-2 text-2xl font-semibold text-bg-washi">{value}</div>
+      </div>
+    </FloatingCard>
   )
 }
 
@@ -640,3 +539,12 @@ function getTagCloud(projects: Project[]): { tag: string; count: number }[] {
     .map(([tag, count]) => ({ tag, count }))
     .sort((a, b) => b.count - a.count)
 }
+
+// Category mapping for Per Category stats display
+const categories: { key: string; label: string; glow: 'matcha' | 'sakura' | 'indigo' | 'tokyo'; textClass: string }[] = [
+  { key: 'ready', label: '⚡ Ready', glow: 'matcha', textClass: 'text-matcha-glow' },
+  { key: 'dev', label: '⟐ Development', glow: 'tokyo', textClass: 'text-neon-tokyo' },
+  { key: 'ideas', label: '◇ Ideas/Plan', glow: 'sakura', textClass: 'text-sakura' },
+  { key: 'config', label: '⚙ Config/Dots', glow: 'indigo', textClass: 'text-indigo-400' },
+  { key: 'legacy', label: '◫ Legacy', glow: 'indigo', textClass: 'text-stone-gray/60' },
+]
