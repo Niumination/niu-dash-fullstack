@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'
 import { useZenStore } from '@/store/useZenStore'
 import FloatingCard from '@/components/ui/FloatingCard'
+import DetailPanel from '@/components/ui/DetailPanel'
 import { cn } from '@/lib/utils'
 import type { Project, Category } from '@/lib/types'
 
@@ -16,6 +17,7 @@ export default function DashboardClient({ projects, stats }: Props) {
   const [search, setSearch] = useState('')
   const [catFilter, setCatFilter] = useState<Category | 'all'>('all')
   const [sort, setSort] = useState<'newest' | 'oldest' | 'az'>('newest')
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   const total = stats.total || 0
   const githubRepos = projects.filter((p) => p.repoName).length
@@ -32,6 +34,7 @@ export default function DashboardClient({ projects, stats }: Props) {
           githubRepos={githubRepos}
           devCount={devCount}
           readyCount={readyCount}
+          onProjectClick={setSelectedProject}
         />
       )}
 
@@ -44,12 +47,15 @@ export default function DashboardClient({ projects, stats }: Props) {
           setCatFilter={setCatFilter}
           sort={sort}
           setSort={setSort}
+          onProjectClick={setSelectedProject}
         />
       )}
 
-      {activeRoute === 'ecosystem' && <EcosystemView projects={projects} />}
-      {activeRoute === 'released' && <ReleasedView projects={projects} />}
+      {activeRoute === 'ecosystem' && <EcosystemView projects={projects} onProjectClick={setSelectedProject} />}
+      {activeRoute === 'released' && <ReleasedView projects={projects} onProjectClick={setSelectedProject} />}
       {activeRoute === 'settings' && <SettingsView />}
+
+      <DetailPanel project={selectedProject} onClose={() => setSelectedProject(null)} />
     </>
   )
 }
@@ -76,6 +82,7 @@ function DashboardView({
   githubRepos,
   devCount,
   readyCount,
+  onProjectClick,
 }: {
   projects: Project[]
   stats: Record<string, number>
@@ -83,6 +90,7 @@ function DashboardView({
   githubRepos: number
   devCount: number
   readyCount: number
+  onProjectClick: (p: Project) => void
 }) {
   const activeDev = projects.filter((p) => p.category === 'dev' && p.status === 'active').length
   const latestProjects = [...projects].sort((a, b) => parseDateValue(b.date) - parseDateValue(a.date)).slice(0, 6)
@@ -155,7 +163,7 @@ function DashboardView({
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {latestProjects.map((p) => (
-            <ProjectCard key={p.name} project={p} />
+            <ProjectCard key={p.name} project={p} onProjectClick={onProjectClick} />
           ))}
         </div>
       </section>
@@ -190,6 +198,7 @@ function ProjectsView({
   setCatFilter,
   sort,
   setSort,
+  onProjectClick,
 }: {
   projects: Project[]
   search: string
@@ -198,6 +207,7 @@ function ProjectsView({
   setCatFilter: (c: Category | 'all') => void
   sort: string
   setSort: (s: any) => void
+  onProjectClick: (p: Project) => void
 }) {
   const displayed = useMemo(() => {
     let items = [...projects]
@@ -290,7 +300,7 @@ function ProjectsView({
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {displayed.map((p) => (
-              <ProjectCard key={p.name} project={p} detailed />
+              <ProjectCard key={p.name} project={p} detailed onProjectClick={onProjectClick} />
             ))}
           </div>
         )}
@@ -300,7 +310,7 @@ function ProjectsView({
 }
 
 // ===== Ecosystem View =====
-function EcosystemView({ projects }: { projects: Project[] }) {
+function EcosystemView({ projects, onProjectClick }: { projects: Project[]; onProjectClick: (p: Project) => void }) {
   const devProjects = projects.filter((p) => p.category === 'dev')
   const byStatus = {
     active: devProjects.filter((p) => p.status === 'active'),
@@ -322,23 +332,23 @@ function EcosystemView({ projects }: { projects: Project[] }) {
 
       <section className="px-6 pb-12">
         {byStatus.active.length > 0 && (
-          <EcoSection title="⟐ Active" projects={byStatus.active} color="text-matcha-glow" />
+          <EcoSection title="⟐ Active" projects={byStatus.active} color="text-matcha-glow" onProjectClick={onProjectClick} />
         )}
         {byStatus.staging.length > 0 && (
-          <EcoSection title="⟐ Staging" projects={byStatus.staging} color="text-amber-400" />
+          <EcoSection title="⟐ Staging" projects={byStatus.staging} color="text-amber-400" onProjectClick={onProjectClick} />
         )}
         {byStatus.paused.length > 0 && (
-          <EcoSection title="⟐ Paused" projects={byStatus.paused} color="text-stone-gray" />
+          <EcoSection title="⟐ Paused" projects={byStatus.paused} color="text-stone-gray" onProjectClick={onProjectClick} />
         )}
         {byStatus.noStatus.length > 0 && (
-          <EcoSection title="⟐ Unclassified" projects={byStatus.noStatus} color="text-stone-gray/60" />
+          <EcoSection title="⟐ Unclassified" projects={byStatus.noStatus} color="text-stone-gray/60" onProjectClick={onProjectClick} />
         )}
       </section>
     </>
   )
 }
 
-function EcoSection({ title, projects, color }: { title: string; projects: Project[]; color: string }) {
+function EcoSection({ title, projects, color, onProjectClick }: { title: string; projects: Project[]; color: string; onProjectClick: (p: Project) => void }) {
   return (
     <div className="mb-8">
       <h2 className={cn("text-xs font-mono uppercase tracking-widest mb-3", color)}>
@@ -346,24 +356,26 @@ function EcoSection({ title, projects, color }: { title: string; projects: Proje
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {projects.map((p) => (
-          <FloatingCard key={p.name} glowColor="matcha" enableTilt={false} className="h-full">
-            <div className="p-4">
-              <div className="flex items-center gap-2">
-                <span>{p.icon}</span>
-                <h3 className="text-sm font-mono font-semibold text-bg-washi truncate">{p.name}</h3>
-              </div>
-              <p className="mt-2 text-xs font-mono text-stone-gray/80 line-clamp-2">{p.desc}</p>
-              {p.tags && (
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {p.tags.slice(0, 4).map((t) => (
-                    <span key={t} className="text-[10px] font-mono px-1.5 py-0.5 rounded-lg glass-strong text-stone-gray">
-                      {t}
-                    </span>
-                  ))}
+          <button key={p.name} onClick={() => onProjectClick(p)} className="w-full text-left">
+            <FloatingCard glowColor="matcha" enableTilt={false} className="h-full">
+              <div className="p-4">
+                <div className="flex items-center gap-2">
+                  <span>{p.icon}</span>
+                  <h3 className="text-sm font-mono font-semibold text-bg-washi truncate">{p.name}</h3>
                 </div>
-              )}
-            </div>
-          </FloatingCard>
+                <p className="mt-2 text-xs font-mono text-stone-gray/80 line-clamp-2">{p.desc}</p>
+                {p.tags && (
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {p.tags.slice(0, 4).map((t) => (
+                      <span key={t} className="text-[10px] font-mono px-1.5 py-0.5 rounded-lg glass-strong text-stone-gray">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </FloatingCard>
+          </button>
         ))}
       </div>
     </div>
@@ -371,7 +383,7 @@ function EcoSection({ title, projects, color }: { title: string; projects: Proje
 }
 
 // ===== Released View =====
-function ReleasedView({ projects }: { projects: Project[] }) {
+function ReleasedView({ projects, onProjectClick }: { projects: Project[]; onProjectClick: (p: Project) => void }) {
   const released = projects.filter(
     (p) => p.website || (p.repoName && p.category === 'ready'),
   )
@@ -393,42 +405,44 @@ function ReleasedView({ projects }: { projects: Project[] }) {
       <section className="px-6 pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {ghReady.map((p) => (
-            <FloatingCard key={p.name} glowColor="tokyo" enableTilt={false} className="h-full">
-              <div className="p-4">
-                <div className="flex items-center gap-2">
-                  <span>{p.icon}</span>
-                  <h3 className="text-sm font-mono font-semibold text-bg-washi truncate">{p.name}</h3>
+            <button key={p.name} onClick={() => onProjectClick(p)} className="w-full text-left">
+              <FloatingCard glowColor="tokyo" enableTilt={false} className="h-full">
+                <div className="p-4">
+                  <div className="flex items-center gap-2">
+                    <span>{p.icon}</span>
+                    <h3 className="text-sm font-mono font-semibold text-bg-washi truncate">{p.name}</h3>
+                  </div>
+                  <p className="mt-2 text-xs font-mono text-stone-gray/80 line-clamp-2">{p.desc}</p>
+                  <div className="mt-3 flex items-center gap-2">
+                    {p.website && (
+                      <a
+                        href={p.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-mono text-neon-tokyo hover:underline"
+                      >
+                        🌐 {new URL(p.website).hostname}
+                      </a>
+                    )}
+                    {p.repoName && (
+                      <a
+                        href={`https://github.com/Niumination/${p.repoName}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-mono text-stone-gray hover:text-bg-washi transition-colors"
+                      >
+                        ⎇ repo
+                      </a>
+                    )}
+                  </div>
+                  <div className="mt-2 flex items-center gap-2 text-[10px] font-mono text-stone-gray/60">
+                    <span>{p.date}</span>
+                    <span>·</span>
+                    <span className="text-matcha-glow">● ready</span>
+                  </div>
                 </div>
-                <p className="mt-2 text-xs font-mono text-stone-gray/80 line-clamp-2">{p.desc}</p>
-                <div className="mt-3 flex items-center gap-2">
-                  {p.website && (
-                    <a
-                      href={p.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-mono text-neon-tokyo hover:underline"
-                    >
-                      🌐 {new URL(p.website).hostname}
-                    </a>
-                  )}
-                  {p.repoName && (
-                    <a
-                      href={`https://github.com/Niumination/${p.repoName}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-mono text-stone-gray hover:text-bg-washi transition-colors"
-                    >
-                      ⎇ repo
-                    </a>
-                  )}
-                </div>
-                <div className="mt-2 flex items-center gap-2 text-[10px] font-mono text-stone-gray/60">
-                  <span>{p.date}</span>
-                  <span>·</span>
-                  <span className="text-matcha-glow">● ready</span>
-                </div>
-              </div>
-            </FloatingCard>
+              </FloatingCard>
+            </button>
           ))}
         </div>
       </section>
@@ -437,10 +451,10 @@ function ReleasedView({ projects }: { projects: Project[] }) {
 }
 
 // ===== Shared Components =====
-function ProjectCard({ project, detailed = false }: { project: Project; detailed?: boolean }) {
+function ProjectCard({ project, detailed = false, onProjectClick }: { project: Project; detailed?: boolean; onProjectClick?: (p: Project) => void }) {
   const p = project
-  return (
-    <FloatingCard glowColor="indigo" enableTilt={false} className="h-full group">
+  const card = (
+    <FloatingCard glowColor="indigo" enableTilt={false} className={'h-full group' + (onProjectClick ? ' cursor-pointer' : '')}>
       <div className="p-4">
         <div className="flex items-center gap-2">
           <span>{p.icon}</span>
@@ -494,6 +508,16 @@ function ProjectCard({ project, detailed = false }: { project: Project; detailed
       </div>
     </FloatingCard>
   )
+
+  if (onProjectClick) {
+    return (
+      <button onClick={() => onProjectClick(p)} className="w-full text-left">
+        {card}
+      </button>
+    )
+  }
+
+  return card
 }
 
 function StatCard({ label, value }: { label: string; value: string }) {
