@@ -11,9 +11,15 @@
 
 ## Struktur
 - `app/` — Next.js App Router (pages, layout, API routes)
+- `components/` — React components (ThreeBackground, ThemeProvider, dll)
 - `prisma/` — Database schema & migrations
 - `scripts/` — Deploy scripts
 - `public/` — Static assets
+
+## Fitur
+- **3D Particle Background** — React Three Fiber (80 partikel dengan connection lines)
+- **Dark Nexus Theme** — Dark/Cyber Dim mode, grid overlay, scanlines, glitch effect
+- **Sidebar Dashboard** — Navigasi + theme toggle + status indicator
 
 ## Catatan
 - `.env` di .gitignore — jangan commit
