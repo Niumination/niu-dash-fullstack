@@ -16,11 +16,13 @@ export default function DashboardClient({ projects, stats }: Props) {
   const activeRoute = useZenStore((s) => s.activeRoute)
   const [search, setSearch] = useState('')
   const [catFilter, setCatFilter] = useState<Category | 'all'>('all')
+  const [repoFilter, setRepoFilter] = useState<'all' | 'github' | 'lokal'>('all')
   const [sort, setSort] = useState<'newest' | 'oldest' | 'az'>('newest')
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   const total = stats.total || 0
   const githubRepos = projects.filter((p) => p.repoName).length
+  const lokalCount = projects.filter((p) => !p.repoName).length
   const devCount = stats.dev || 0
   const readyCount = stats.ready || 0
 
@@ -32,6 +34,7 @@ export default function DashboardClient({ projects, stats }: Props) {
           stats={stats}
           total={total}
           githubRepos={githubRepos}
+          lokalCount={lokalCount}
           devCount={devCount}
           readyCount={readyCount}
           onProjectClick={setSelectedProject}
@@ -45,6 +48,8 @@ export default function DashboardClient({ projects, stats }: Props) {
           setSearch={setSearch}
           catFilter={catFilter}
           setCatFilter={setCatFilter}
+          repoFilter={repoFilter}
+          setRepoFilter={setRepoFilter}
           sort={sort}
           setSort={setSort}
           onProjectClick={setSelectedProject}
@@ -80,6 +85,7 @@ function DashboardView({
   stats,
   total,
   githubRepos,
+  lokalCount,
   devCount,
   readyCount,
   onProjectClick,
@@ -88,6 +94,7 @@ function DashboardView({
   stats: Record<string, number>
   total: number
   githubRepos: number
+  lokalCount: number
   devCount: number
   readyCount: number
   onProjectClick: (p: Project) => void
@@ -125,12 +132,12 @@ function DashboardView({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <StatCard label="Total Projects" value={String(total)} />
           <StatCard label="GitHub Tracked" value={String(githubRepos)} />
+          <StatCard label="Lokal Only" value={String(lokalCount)} />
           <StatCard label="In Development" value={String(devCount)} />
-          <StatCard label="Ready/Shipped" value={String(readyCount)} />
         </div>
       </section>
 
-      {/* Per Category */}
+      {/* Per Category & Ready Row */}
       <section className="px-6 pb-8">
         <h2 className="text-xs font-medium tracking-widest uppercase text-stone-gray/60 mb-4 font-mono">
           ◇ Per Category
@@ -196,6 +203,8 @@ function ProjectsView({
   setSearch,
   catFilter,
   setCatFilter,
+  repoFilter,
+  setRepoFilter,
   sort,
   setSort,
   onProjectClick,
@@ -205,6 +214,8 @@ function ProjectsView({
   setSearch: (s: string) => void
   catFilter: Category | 'all'
   setCatFilter: (c: Category | 'all') => void
+  repoFilter: 'all' | 'github' | 'lokal'
+  setRepoFilter: (r: 'all' | 'github' | 'lokal') => void
   sort: string
   setSort: (s: any) => void
   onProjectClick: (p: Project) => void
@@ -212,6 +223,8 @@ function ProjectsView({
   const displayed = useMemo(() => {
     let items = [...projects]
     if (catFilter !== 'all') items = items.filter((p) => p.category === catFilter)
+    if (repoFilter === 'github') items = items.filter((p) => p.repoName)
+    if (repoFilter === 'lokal') items = items.filter((p) => !p.repoName)
     if (search) {
       const q = search.toLowerCase()
       items = items.filter(
@@ -274,6 +287,25 @@ function ProjectsView({
                 )}
               >
                 {c.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Repo source filter */}
+          <div className="flex gap-2 items-center">
+            <span className="text-[10px] font-mono text-stone-gray/60 uppercase tracking-wider mr-1">Source:</span>
+            {(['all', 'github', 'lokal'] as const).map((r) => (
+              <button
+                key={r}
+                onClick={() => setRepoFilter(r)}
+                className={cn(
+                  "px-2.5 py-1.5 rounded-xl text-xs font-mono transition-all",
+                  repoFilter === r
+                    ? "glass-strong text-neon-tokyo"
+                    : "text-stone-gray hover:text-bg-washi hover:bg-white/[0.04]"
+                )}
+              >
+                {r === 'all' ? 'All' : r === 'github' ? '⎇ GitHub' : '📁 Lokal'}
               </button>
             ))}
           </div>
@@ -362,6 +394,12 @@ function EcoSection({ title, projects, color, onProjectClick }: { title: string;
                 <div className="flex items-center gap-2">
                   <span>{p.icon}</span>
                   <h3 className="text-sm font-mono font-semibold text-bg-washi truncate">{p.name}</h3>
+                  <span className={cn(
+                    "ml-auto text-[10px] font-mono px-1.5 py-0.5 rounded-lg",
+                    p.repoName ? "bg-stone-gray/10 text-stone-gray/60" : "bg-white/[0.03] text-stone-gray/40"
+                  )}>
+                    {p.repoName ? '⎇ Git' : '📁'}
+                  </span>
                 </div>
                 <p className="mt-2 text-xs font-mono text-stone-gray/80 line-clamp-2">{p.desc}</p>
                 {p.tags && (
@@ -411,6 +449,9 @@ function ReleasedView({ projects, onProjectClick }: { projects: Project[]; onPro
                   <div className="flex items-center gap-2">
                     <span>{p.icon}</span>
                     <h3 className="text-sm font-mono font-semibold text-bg-washi truncate">{p.name}</h3>
+                    <span className="ml-auto text-[10px] font-mono px-1.5 py-0.5 rounded-lg bg-stone-gray/10 text-stone-gray/60">
+                      ⎇ GitHub
+                    </span>
                   </div>
                   <p className="mt-2 text-xs font-mono text-stone-gray/80 line-clamp-2">{p.desc}</p>
                   <div className="mt-3 flex items-center gap-2">
@@ -473,6 +514,17 @@ function ProjectCard({ project, detailed = false, onProjectClick }: { project: P
               {p.status}
             </span>
           )}
+          {/* Repo source badge */}
+          <span
+            className={cn(
+              "ml-auto text-[10px] font-mono px-1.5 py-0.5 rounded-lg",
+              p.repoName
+                ? "bg-stone-gray/10 text-stone-gray/70"
+                : "bg-white/[0.03] text-stone-gray/50"
+            )}
+          >
+            {p.repoName ? '⎇ GitHub' : '📁 Lokal'}
+          </span>
         </div>
         <p className="mt-2 text-xs font-mono text-stone-gray/80 line-clamp-2 leading-relaxed">
           {p.desc}
