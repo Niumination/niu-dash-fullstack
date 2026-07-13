@@ -65,8 +65,8 @@ export default function Sidebar() {
         </AnimatePresence>
       </div>
 
-      {/* Navigation */}
-      <nav className="flex flex-1 flex-col gap-1 px-3 py-4">
+      {/* Navigation — centered vertically */}
+      <nav className="flex flex-1 flex-col gap-1 px-3 justify-center">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeRoute === item.id;

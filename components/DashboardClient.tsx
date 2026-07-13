@@ -3,7 +3,6 @@
 import { useState, useMemo } from 'react'
 import { useZenStore } from '@/store/useZenStore'
 import FloatingCard from '@/components/ui/FloatingCard'
-import DetailPanel from '@/components/ui/DetailPanel'
 import { cn } from '@/lib/utils'
 import type { Project, Category } from '@/lib/types'
 
@@ -14,11 +13,11 @@ interface Props {
 
 export default function DashboardClient({ projects, stats }: Props) {
   const activeRoute = useZenStore((s) => s.activeRoute)
+  const setSelectedProject = useZenStore((s) => s.setSelectedProject)
   const [search, setSearch] = useState('')
   const [catFilter, setCatFilter] = useState<Category | 'all'>('all')
   const [repoFilter, setRepoFilter] = useState<'all' | 'github' | 'lokal'>('all')
   const [sort, setSort] = useState<'newest' | 'oldest' | 'az'>('newest')
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   const total = stats.total || 0
   const githubRepos = projects.filter((p) => p.repoName).length
@@ -59,8 +58,6 @@ export default function DashboardClient({ projects, stats }: Props) {
       {activeRoute === 'ecosystem' && <EcosystemView projects={projects} onProjectClick={setSelectedProject} />}
       {activeRoute === 'released' && <ReleasedView projects={projects} onProjectClick={setSelectedProject} />}
       {activeRoute === 'settings' && <SettingsView />}
-
-      <DetailPanel project={selectedProject} onClose={() => setSelectedProject(null)} />
     </>
   )
 }

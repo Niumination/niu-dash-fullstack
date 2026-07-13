@@ -1,7 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
+// Prisma schema for niu-dash-fullstack
+// Database: PostgreSQL (extendable to SQLite for dev)
 
 generator client {
   provider = "prisma-client"
@@ -10,4 +8,81 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+}
+
+// ===== Core Models =====
+
+model Project {
+  id            String   @id @default(cuid())
+  icon          String   @default("📁")
+  name          String   @unique
+  path          String
+  desc          String
+  tags          Json      // JSON array of strings (Prisma 7 compat)
+  date          String   // Display date (e.g. "15 Jun 2026")
+  website       String?
+  category      Category @default(dev)
+  categoryLabel String   @default("Development")
+  status        DevStatus?
+  repoName      String?
+  repoOwner     String   @default("Niumination")
+
+  // Relations
+  history         HistoryEntry[]
+  plan            PlanItem[]
+  recommendations Recommendation[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model HistoryEntry {
+  id        String  @id @default(cuid())
+  date      String  // Display date
+  text      String
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  sortOrder Int     @default(0)
+}
+
+model PlanItem {
+  id        String  @id @default(cuid())
+  text      String
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  sortOrder Int     @default(0)
+}
+
+model Recommendation {
+  id        String             @id @default(cuid())
+  text      String
+  priority  RecommendationPriority @default(mid)
+  projectId String
+  project   Project            @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  sortOrder Int                @default(0)
+}
+
+// ===== Enums =====
+
+enum Category {
+  ready
+  dev
+  ideas
+  config
+  legacy
+}
+
+enum DevStatus {
+  active
+  staging
+  paused
+}
+
+enum RecommendationPriority {
+  high
+  mid
+  low
 }

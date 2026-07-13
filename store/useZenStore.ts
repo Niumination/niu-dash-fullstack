@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { subscribeWithSelector } from "zustand/middleware";
+import type { Project } from "@/lib/types";
 
 export type PerformanceMode = "zen" | "balanced" | "minimal";
 export type ThemeMode = "zen-night" | "zen-dawn";
@@ -31,6 +32,10 @@ interface ZenStore {
   toggleSidebar: () => void;
   activeRoute: string;
   setActiveRoute: (route: string) => void;
+
+  // Detail Panel
+  selectedProject: Project | null;
+  setSelectedProject: (project: Project | null) => void;
 }
 
 export const useZenStore = create<ZenStore>()(
@@ -54,6 +59,10 @@ export const useZenStore = create<ZenStore>()(
     toggleSidebar: () => set((s) => ({ sidebarOpen: !s.sidebarOpen })),
     activeRoute: "dashboard",
     setActiveRoute: (route) => set({ activeRoute: route }),
+
+    // Detail Panel
+    selectedProject: null,
+    setSelectedProject: (project) => set({ selectedProject: project }),
   }))
 );
 

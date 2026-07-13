@@ -1,7 +1,12 @@
 import type { Project, Category, DevStatus, ProjectsData } from './types'
+import { ProjectsDataSchema } from './validation'
 import raw from '@/data/projects.json'
 
-const data = raw as unknown as ProjectsData
+const parsed = ProjectsDataSchema.safeParse(raw)
+if (!parsed.success) {
+  console.error('[projects] Invalid data/projects.json:', parsed.error.issues)
+}
+const data: ProjectsData = parsed.success ? parsed.data : (raw as unknown as ProjectsData)
 
 export function getAllProjects(): Project[] {
   return data.projects
