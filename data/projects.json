@@ -1,0 +1,3646 @@
+{
+  "_meta": {
+    "extracted": "2026-10-21T04:55:24.948Z",
+    "source": "Production/niu-dash/index.html",
+    "stats": {
+      "ready": 30,
+      "dev": 39,
+      "ideas": 13,
+      "config": 23,
+      "legacy": 7,
+      "total": 112
+    }
+  },
+  "projects": [
+    {
+      "icon": "◈",
+      "name": "Meum",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/Documents-Mac/Mac-Project/Meum/index.html",
+      "desc": "Halaman welcome Matrix-style dengan animasi particle dan CRT effect.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Canvas",
+        "Matrix"
+      ],
+      "date": "24 Feb 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "⊞",
+      "name": "DevFlow / niu-portal",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/project-copilot/niu-portal/index.html",
+      "desc": "Landing page manajemen proyek dengan Linear Design System. Dark theme responsive.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JS",
+        "Linear DS"
+      ],
+      "date": "3 Mei 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "◆",
+      "name": "Portfolio 3D",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/pi/portfolio-3d/index.html",
+      "desc": "Portofolio interaktif 3D dengan animasi modern.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JS",
+        "3D"
+      ],
+      "date": "10 Mei 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "◈",
+      "name": "Maze Game (Vite)",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/claude-projects-or/maze-game/",
+      "desc": "Game maze HTML5 + Vite + React. Maze procedural generator.",
+      "tags": [
+        "HTML5",
+        "Vite",
+        "Game",
+        "React"
+      ],
+      "date": "3 Mei 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "⎔",
+      "name": "zhtop",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/pi/zhtop/",
+      "desc": "Tool terminal Node.js untuk monitoring and visualisasi data via CLI.",
+      "tags": [
+        "Node.js",
+        "CLI",
+        "Terminal"
+      ],
+      "date": "10 Mei 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "⊚",
+      "name": "Niumination Portal - Diskominfo",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/Rekomendasi-Aplikasi-ASN-Daerah.html",
+      "desc": "Portal Dinas Kominfo Aceh Tengah. Tailwind CSS, tracker IPD, SPBE, sidebar menu.",
+      "tags": [
+        "HTML",
+        "Tailwind",
+        "Portal",
+        "ASN"
+      ],
+      "date": "11 Mei 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "⌁",
+      "name": "CPUFriendFriend",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/MyGit/CPUFriendFriend/",
+      "desc": "Python script optimasi power management Hackintosh.",
+      "tags": [
+        "Python",
+        "Hackintosh",
+        "CPU",
+        "Kext"
+      ],
+      "date": "14 Mei 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "☆",
+      "name": "Niu-Startpage",
+      "path": "https://github.com/Niumination/Niu-Startpage",
+      "desc": "Gateway pribadi ke internet. Startpage minimal + search + bookmark.",
+      "tags": [
+        "HTML",
+        "Startpage",
+        "GitHub"
+      ],
+      "date": "2026",
+      "website": "https://niumination.github.io/Niu-Startpage",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Niu-Startpage"
+    },
+    {
+      "icon": "☆",
+      "name": "zaryu.startpage",
+      "path": "https://github.com/Niumination/zaryu.startpage",
+      "desc": "Aesthetic startpage Catppuccin style, clean minimal, hosted GitHub Pages.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Catppuccin",
+        "Pages"
+      ],
+      "date": "2026",
+      "website": "https://niumination.github.io/zaryu.startpage",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "zaryu.startpage"
+    },
+    {
+      "icon": "☆",
+      "name": "NiuHomePage",
+      "path": "https://github.com/Niumination/NiuHomePage",
+      "desc": "Homepage personal karena pengen punya homepage sendiri.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Homepage"
+      ],
+      "date": "2026",
+      "website": "https://niumination.github.io/NiuHomePage",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "NiuHomePage"
+    },
+    {
+      "icon": "☆",
+      "name": "SilentSDDM",
+      "path": "https://github.com/Niumination/SilentSDDM",
+      "desc": "SDDM theme highly customizable untuk Arch / Hyprland.",
+      "tags": [
+        "SDDM",
+        "Theme",
+        "Linux",
+        "QML"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "SilentSDDM"
+    },
+    {
+      "icon": "☆",
+      "name": "Maze-3D-Game",
+      "path": "https://github.com/Niumination/Maze-3D-Game---Web-Based",
+      "desc": "Game maze 3D berbasis web. Labyrinth interaktif dalam 3D.",
+      "tags": [
+        "Web",
+        "3D",
+        "Game",
+        "Maze"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Maze-3D-Game---Web-Based"
+    },
+    {
+      "icon": "☆",
+      "name": "Niu-Cyber-Search-Engine",
+      "path": "https://github.com/Niumination/Niu-Cyber-Search-Engine",
+      "desc": "Cyber search engine app pertama. Tema cyber/dark.",
+      "tags": [
+        "Search",
+        "Web",
+        "Cyber"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Niu-Cyber-Search-Engine"
+    },
+    {
+      "icon": "☆",
+      "name": "Niu-LKH",
+      "path": "https://github.com/Niumination/Niu-LKH",
+      "desc": "Laporan Kegiatan Harian - Afrizal Munthe. ✓ DONE. Supabase cloud backup, GH Pages. Vite + React 19 + Tailwind v4.",
+      "tags": [
+        "Web",
+        "Laporan",
+        "ASN",
+        "React",
+        "Done"
+      ],
+      "date": "19 Jun 2026",
+      "website": "https://niumination.github.io/Niu-LKH",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Niu-LKH"
+    },
+    {
+      "icon": "☆",
+      "name": "niu-speedtest",
+      "path": "https://github.com/Niumination/niu-speedtest",
+      "desc": "Aplikasi speed test kecepatan jaringan berbasis Python.",
+      "tags": [
+        "Speedtest",
+        "Python",
+        "Network"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "niu-speedtest"
+    },
+    {
+      "icon": "☆",
+      "name": "Bella",
+      "path": "https://github.com/Niumination/Bella",
+      "desc": "Bella is best - project personal.",
+      "tags": [
+        "Project",
+        "Personal"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Bella"
+    },
+    {
+      "icon": "☆",
+      "name": "DiskominfoAT",
+      "path": "https://github.com/Niumination/DiskominfoAT",
+      "desc": "Website Diskominfo Aceh Tengah. Dibangun dengan Cursor + ContinueDev.",
+      "tags": [
+        "Website",
+        "Kominfo",
+        "GovTech"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "DiskominfoAT"
+    },
+    {
+      "icon": "☆",
+      "name": "Database-DiskominfoAT",
+      "path": "https://github.com/Niumination/Database-DiskominfoAT",
+      "desc": "Database untuk website DiskominfoAT - struktur and skema data.",
+      "tags": [
+        "Database",
+        "SQL",
+        "Kominfo"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Database-DiskominfoAT"
+    },
+    {
+      "icon": "☆",
+      "name": "Rekapitulasi-SPBE",
+      "path": "https://github.com/Niumination/Rekapitulasi-SPBE",
+      "desc": "Aplikasi rekap SPBE (Sistem Pemerintahan Berbasis Elektronik).",
+      "tags": [
+        "SPBE",
+        "GovTech",
+        "Rekap"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Rekapitulasi-SPBE"
+    },
+    {
+      "icon": "☆",
+      "name": "AuditTI-AT",
+      "path": "https://github.com/Niumination/AuditTI-AT",
+      "desc": "IT Procurement Audit Kabupaten Aceh Tengah pakai AI. Sumber dari LPSE.",
+      "tags": [
+        "Audit",
+        "LPSE",
+        "AI",
+        "GovTech"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "AuditTI-AT"
+    },
+    {
+      "icon": "☆",
+      "name": "Prakom-Surgawi",
+      "path": "https://github.com/Niumination/Prakom-Surgawi",
+      "desc": "Anything you want - project Pranata Komputer.",
+      "tags": [
+        "Project",
+        "ASN",
+        "Prakom"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Prakom-Surgawi"
+    },
+    {
+      "icon": "☆",
+      "name": "cyb3rgh0u1.github.io",
+      "path": "https://github.com/Niumination/cyb3rgh0u1.github.io",
+      "desc": "GitHub Pages - cyber/ghoul themed.",
+      "tags": [
+        "Pages",
+        "Cyber",
+        "GitHub"
+      ],
+      "date": "2026",
+      "website": "https://cyb3rgh0u1.github.io",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "cyb3rgh0u1.github.io"
+    },
+    {
+      "icon": "☆",
+      "name": "PAGASUS-PRO",
+      "path": "https://github.com/Niumination/PAGASUS-PRO",
+      "desc": "Fork project - PAGASUS PRO.",
+      "tags": [
+        "Fork",
+        "Project"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "PAGASUS-PRO"
+    },
+    {
+      "icon": "☆",
+      "name": "acehtengah-web",
+      "path": "/Users/zaryu/Desktop/Niumination/projects/zen/acehtengah-web/",
+      "desc": "Website statis multi-halaman Aceh Tengah - HTML murni, berita, layanan publik.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Website",
+        "AcehTengah"
+      ],
+      "date": "2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "☆",
+      "name": "HermesV-Github",
+      "path": "https://github.com/Niumination/HermesV-Github",
+      "desc": "Hermes Agent Portable on Github Codespace.",
+      "tags": [
+        "Hermes",
+        "Codespace",
+        "Portable"
+      ],
+      "date": "6 Jun 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "HermesV-Github"
+    },
+    {
+      "icon": "☆",
+      "name": "niu-private",
+      "path": "https://github.com/Niumination/niu-private",
+      "desc": "Niu Private — Document Vault & Kanban Project Board untuk dokumentasi pribadi + project tracking.",
+      "tags": [
+        "TypeScript",
+        "Vault",
+        "Kanban",
+        "Document"
+      ],
+      "date": "6 Jun 2026",
+      "website": "https://niumination.github.io/niu-private",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": "active",
+      "history": [
+        {
+          "date": "6 Jun 2026",
+          "text": "Project dimulai — document vault & kanban project board untuk dokumentasi pribadi. TypeScript, deployment GH Pages."
+        }
+      ],
+      "plan": [
+        "Dokumentasi vault: struktur folder, template, workflow untuk semua project Niumination",
+        "Kanban board: tracking task & progress per project",
+        "Integrasi dengan Niu-Dash sebagai data source",
+        "Search + tagging system untuk dokumentasi"
+      ],
+      "recommendations": [
+        {
+          "text": "Jadikan sebagai single source of truth untuk dokumentasi — semua project punya entry di sini.",
+          "priority": "high"
+        },
+        {
+          "text": "Kanban bisa integrasi dengan GitHub Projects via API — auto-sync task dari repo.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "niu-private"
+    },
+    {
+      "icon": "☆",
+      "name": "arch-web-dashboard",
+      "path": "https://github.com/Niumination/arch-web-dashboard",
+      "desc": "Arch Linux web dashboard — monitoring & system management untuk Arch Linux.",
+      "tags": [
+        "TypeScript",
+        "Dashboard",
+        "Linux",
+        "Web"
+      ],
+      "date": "Jun 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "arch-web-dashboard"
+    },
+    {
+      "icon": "☆",
+      "name": "mac-web-dashboard",
+      "path": "https://github.com/Niumination/mac-web-dashboard",
+      "desc": "macOS web dashboard — monitoring & system management untuk macOS.",
+      "tags": [
+        "TypeScript",
+        "Dashboard",
+        "macOS",
+        "Web"
+      ],
+      "date": "Jun 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "mac-web-dashboard"
+    },
+    {
+      "icon": "☆",
+      "name": "AI-First-OS",
+      "path": "https://github.com/Niumination/AI-First-OS",
+      "desc": "Arch Linux ISO builder — Sistem operasi dengan Hermes Agent sebagai warga negara kelas satu.",
+      "tags": [
+        "Shell",
+        "Linux",
+        "Arch",
+        "ISO",
+        "AI"
+      ],
+      "date": "Jun 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "AI-First-OS"
+    },
+    {
+      "icon": "☆",
+      "name": "ai-file-organizer-android",
+      "path": "https://github.com/niumination/ai-file-organizer-android",
+      "desc": "AI File Organizer for Android — merapikan file SD Card / internal storage pakai Google Gemini AI. Kotlin, Jetpack Compose, SAF Scoped Storage.",
+      "tags": [
+        "Kotlin",
+        "Android",
+        "AI",
+        "Gemini",
+        "Compose"
+      ],
+      "date": "Jun 2026",
+      "category": "ready",
+      "categoryLabel": "Ready",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "ai-file-organizer-android"
+    },
+    {
+      "icon": "☪",
+      "name": "Gayo Mengaji",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/project-copilot/Aplikasi Gayo Mengaji/",
+      "desc": "Aplikasi Al-Quran digital untuk ASN Aceh Tengah. Flutter + Node.js + PostgreSQL.",
+      "tags": [
+        "Flutter",
+        "Node.js",
+        "PostgreSQL",
+        "Mobile"
+      ],
+      "date": "5 Apr 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "5 Apr 2026",
+          "text": "Project dimulai. Dokumentasi resmi sistem dibuat."
+        },
+        {
+          "date": "14 Apr 2026",
+          "text": "Roadmap lengkap: Gayo Mengaji Roadmap — 4 Section."
+        },
+        {
+          "date": "20 Apr 2026",
+          "text": "Implementation plan selesai. Design screens di Figma."
+        },
+        {
+          "date": "Apr 2026",
+          "text": "Section 1 selesai: landing page, login, dan fitur dasar. Hosting di Vercel + Railway."
+        },
+        {
+          "date": "Mei 2026",
+          "text": "Workflow tracking aktif — development berjalan. Target: ASN Aceh Tengah sebagai user base."
+        }
+      ],
+      "plan": [
+        "Section 2: Dashboard utama + tilawah harian + setoran hafalan",
+        "Section 3: Fitur peringkat, laporan, notifikasi",
+        "Section 4: Admin dashboard, monitoring, ekspor data",
+        "Integrasi dengan SPBE Aceh Tengah (SSO, data ASN)",
+        "Deploy ke Play Store + App Store untuk ASN",
+        "Mode offline untuk daerah tanpa sinyal"
+      ],
+      "recommendations": [
+        {
+          "text": "Prioritas #1: ini project paling konkret dengan user real (ASN Aceh Tengah). Alokasi waktu terbanyak.",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi SPBE SSO harus dari awal — jangan retrofit. Biar terintegrasi dengan ekosistem Diskominfo.",
+          "priority": "high"
+        },
+        {
+          "text": "Flutter untuk cross-platform (Android+iOS) — pastikan build untuk dua platform sekaligus.",
+          "priority": "high"
+        },
+        {
+          "text": "Gamification: leaderboard ASN, badge tilawah, streak — boost engagement.",
+          "priority": "mid"
+        },
+        {
+          "text": "Backup data offline dengan SQLite sync ke PostgreSQL — untuk daerah pelosok Aceh Tengah.",
+          "priority": "high"
+        }
+      ],
+      "repoName": null
+    },
+    {
+      "icon": "⊚",
+      "name": "Niumination Portal (Fullstack)",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/niumination-portal/",
+      "desc": "Portal React + Express. Dashboard IPD, task tracker, SPBE, arsip.",
+      "tags": [
+        "React",
+        "Express",
+        "Vite",
+        "Fullstack"
+      ],
+      "date": "28 Apr 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "28 Apr 2026",
+          "text": "Project dimulai. Frontend React+Vite, backend Node.js/Express."
+        },
+        {
+          "date": "Apr-Mei 2026",
+          "text": "Dashboard IPD, task tracker, SPBE module. NiuDesign system (DESIGN-linear.app.md)."
+        },
+        {
+          "date": "Current",
+          "text": "Lanjut development — perlu penyelesaian fitur core."
+        }
+      ],
+      "plan": [
+        "Complete dashboard IPD dengan real data",
+        "User management + role-based access control (RBAC)",
+        "Task management dengan assignee + deadline",
+        "SPBE module: evaluasi, rekap, laporan",
+        "Arsip dokumen + search",
+        "Responsive untuk mobile"
+      ],
+      "recommendations": [
+        {
+          "text": "Prioritas #2: portal ini jadi wajah digital Diskominfo. Selesaikan fitur inti sebelum tambah fitur baru.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan React Query / TanStack Query untuk state management — kurangi boilerplate.",
+          "priority": "mid"
+        },
+        {
+          "text": "Implementasi role-based access (Admin, OPD, ASN) dari awal — retrofit RBAC itu sakit.",
+          "priority": "high"
+        },
+        {
+          "text": "Dockerize untuk deployment mudah ke VPS / server Diskominfo.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": null
+    },
+    {
+      "icon": "⌘",
+      "name": "ClaudeCode / claw-code",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/ClaudeLeak/claudecode/",
+      "desc": "AI coding agent Python/Rust. Multi-provider LLM, multi-agent system.",
+      "tags": [
+        "Python",
+        "Rust",
+        "CLI",
+        "AI",
+        "LLM"
+      ],
+      "date": "26 Apr 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "staging",
+      "history": [
+        {
+          "date": "26 Apr 2026",
+          "text": "Fork pertama dari claudecode (soongenwong) — eksplorasi multi-agent system."
+        },
+        {
+          "date": "2026 — Mei",
+          "text": "Clone kedua dari ultraworkers/claw-code — pendekatan berbeda, Rust-based."
+        },
+        {
+          "date": "2026 — Current",
+          "text": "Dua fork berbeda sumber. Eksplorasi multi-provider LLM, multi-agent Python."
+        }
+      ],
+      "plan": [
+        "Pilih satu fork sebagai base code — atau merge feature dari keduanya",
+        "Dockerize untuk portabilitas lintas OS",
+        "Integrasi dengan disunday (Discord controller) untuk remote agent management"
+      ],
+      "recommendations": [
+        {
+          "text": "Konsolidasi: dua fork claudecode/claw-code membingungkan. Pilih satu primary, archive yang lain.",
+          "priority": "high"
+        },
+        {
+          "text": "Containerize + publish ke Docker Hub — biar bisa run di VPS / server manapun.",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi dengan Niumination Portal sebagai backend agent manager.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "Flame-ADE",
+      "path": "https://github.com/Niumination/Flame-ADE",
+      "desc": "AI-native terminal emulator 7MB. Tauri 2 + Rust + React 19. BYOK AI, no telemetry.",
+      "tags": [
+        "Rust",
+        "Tauri",
+        "React",
+        "Terminal",
+        "AI"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026 — Q1",
+          "text": "Konsep awal: AI-native terminal emulator sub-10MB. Ide dari frustrasi dengan bloat IDE modern."
+        },
+        {
+          "date": "2026 — Q2",
+          "text": "Prototype Tauri 2 + Rust + React 19. BYOK AI, OS keychain, zero telemetry. Target macOS Tahoe 26.5."
+        },
+        {
+          "date": "2026 — Current",
+          "text": "Pengembangan core terminal emulator. Integrasi multi-provider LLM (OpenAI, Anthropic, OpenRouter)."
+        }
+      ],
+      "plan": [
+        "Selesaikan core terminal rendering (Rust + webview)",
+        "Plugin system untuk ekstensi AI custom",
+        "Multi-session tabs + session persistence",
+        "Package manager built-in (niupkg?)",
+        "Rilis alpha — public beta di GitHub Releases"
+      ],
+      "recommendations": [
+        {
+          "text": "Fokus konsolidasi: Flame-ADE dan terax-ai punya overlap ~70%. Gabung atau bedakan use case secara tegas.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan GitHub Projects / Milestones untuk tracking progress publik — biar kontributor tertarik.",
+          "priority": "high"
+        },
+        {
+          "text": "Siapkan documentation-first approach: ARCHITECTURE.md + CONTRIBUTING.md sebelum rilis publik.",
+          "priority": "mid"
+        },
+        {
+          "text": "Benchmark performa vs Warp, Hyper, iTerm2 — publikasikan hasilnya sebagai blog post / dev.to.",
+          "priority": "low"
+        }
+      ],
+      "repoName": "Flame-ADE"
+    },
+    {
+      "icon": "△",
+      "name": "terax-ai",
+      "path": "https://github.com/Niumination/terax-ai",
+      "desc": "Lightweight AI terminal emulator 7MB. Rust + Tauri + React.",
+      "tags": [
+        "Rust",
+        "Tauri",
+        "React",
+        "Terminal",
+        "AI"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "paused",
+      "history": [
+        {
+          "date": "2026 — Q1",
+          "text": "Terinspirasi dari proyek ADE open-source. Mulai sebagai eksperimen lightweight terminal."
+        },
+        {
+          "date": "2026 — Q2",
+          "text": "Berhasil mencapai ~7MB binary size. Stack Rust + Tauri + React. Fitur dasar typing + output rendering."
+        },
+        {
+          "date": "2026 — Current",
+          "text": "Ditunda — fokus dialihkan ke Flame-ADE yang lebih mature secara arsitektur."
+        }
+      ],
+      "plan": [
+        "Keputusan: merge ke Flame-ADE atau jalan sendiri sebagai minimal edition",
+        "Jika jalan sendiri: fokus sebagai lightweight demo / POC untuk ADE concept",
+        "Jika merge: port fitur unik (jika ada) ke Flame-ADE"
+      ],
+      "recommendations": [
+        {
+          "text": "Evaluasi make-or-break: 2 proyek ADE parallel menghabiskan energi. Dokumentasi perbedaan teknis, lalu ambil keputusan.",
+          "priority": "high"
+        },
+        {
+          "text": "Jika dipertahankan, positioning sebagai \"ADE lite\" untuk resource-constrained environment (VPS, Raspberry Pi).",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "terax-ai"
+    },
+    {
+      "icon": "△",
+      "name": "flame-code",
+      "path": "https://github.com/Niumination/flame-code",
+      "desc": "My First Build, Using AI - project eksperimen AI coding pertama.",
+      "tags": [
+        "AI",
+        "Code",
+        "Experiment",
+        "TypeScript"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026 — Q1",
+          "text": "\"My First Build, Using AI\" — proyek pertama yang fully dibangun dengan bantuan AI coding agent."
+        },
+        {
+          "date": "2026 — Q2",
+          "text": "Eksperimen dengan Cursor, Claude Code, dan ContinueDev. Belajar pattern AI-assisted development."
+        },
+        {
+          "date": "2026 — Current",
+          "text": "Iterasi cepat: terus bereksperimen dengan berbagai pendekatan AI coding."
+        }
+      ],
+      "plan": [
+        "Dokumentasi perjalanan: write-up tentang apa yang berhasil vs tidak dalam AI-assisted coding",
+        "Template boilerplate untuk rapid prototyping dengan AI",
+        "Benchmark berbagai AI coding tools (Cursor, Claude Code, Copilot, Continue)"
+      ],
+      "recommendations": [
+        {
+          "text": "Transformasi menjadi blog/series: \"My First Build\" punya nilai storytelling tinggi. Publikasikan sebagai artikel dev.to, Twitter thread.",
+          "priority": "high"
+        },
+        {
+          "text": "Buat repo template dari hasil eksperimen — biar orang lain bisa reproduce learning path yang sama.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "flame-code"
+    },
+    {
+      "icon": "△",
+      "name": "jcode",
+      "path": "https://github.com/Niumination/jcode",
+      "desc": "Coding Agent Harness - framework AI coding agent.",
+      "tags": [
+        "AI",
+        "Agent",
+        "Framework"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026 — Q1",
+          "text": "Ide Coding Agent Harness — framework untuk orchestrasi AI coding agents."
+        },
+        {
+          "date": "2026 — Q2",
+          "text": "Prototyping multi-agent workflow. Integrasi dengan local LLM + cloud API."
+        }
+      ],
+      "plan": [
+        "Definisi API: agent input/output protocol",
+        "Plugin system untuk custom tools & MCP server integration",
+        "Integrasi langsung dengan Flame-ADE sebagai agent engine"
+      ],
+      "recommendations": [
+        {
+          "text": "Aliansi dengan ClaudeCode/claw-code — jangan buat ulang yang sudah ada. Fork dan extend.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan MCP (Model Context Protocol) sebagai standard agent-tool communication.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "jcode"
+    },
+    {
+      "icon": "△",
+      "name": "skills",
+      "path": "https://github.com/Niumination/skills",
+      "desc": "Skills for Real Engineers - dari .claude directory langsung.",
+      "tags": [
+        "Skills",
+        "Claude",
+        "AI",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026 — Q2",
+          "text": "Direktori skills Claude Code dari .claude — dibagikan sebagai open-source. Skills for Real Engineers."
+        }
+      ],
+      "plan": [
+        "Kurasi skills yang benar-benar reusable",
+        "Dokumentasi cara pakai setiap skill",
+        "Integrasi dengan jcode sebagai skill registry default",
+        "Community contributions via PR"
+      ],
+      "recommendations": [
+        {
+          "text": "Buat skill template + validator agar kontribusi community terstandarisasi.",
+          "priority": "high"
+        },
+        {
+          "text": "Host GitHub Pages sebagai skill marketplace / searchable registry.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "skills"
+    },
+    {
+      "icon": "△",
+      "name": "G0DM0D3",
+      "path": "https://github.com/Niumination/G0DM0D3",
+      "desc": "LIBERATED AI CHAT - AI chat bebas tanpa batasan.",
+      "tags": [
+        "AI",
+        "Chat",
+        "Uncensored"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork project — \"LIBERATED AI CHAT\". Eksperimen dengan mode AI chat unrestricted."
+        }
+      ],
+      "plan": [
+        "Self-host option dengan local LLM (llama.cpp, Ollama)",
+        "Multi-model routing: uncensored local + censored cloud"
+      ],
+      "recommendations": [
+        {
+          "text": "Bedakan positioning dari AI chat mainstream — fokus ke developer use case (code generation tanpa filter).",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "G0DM0D3"
+    },
+    {
+      "icon": "△",
+      "name": "disunday",
+      "path": "https://github.com/Niumination/disunday",
+      "desc": "Kontrol opencode dari Discord. Kelola AI coding 24/7 via Discord.",
+      "tags": [
+        "Discord",
+        "AI",
+        "Bot",
+        "opencode"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026 — Q2",
+          "text": "Fork dari disunday — Discord bridge untuk opencode. Kontrol AI coding via Discord."
+        }
+      ],
+      "plan": [
+        "Bridge ke semua AI coding tool yang dipakai (Claude Code, Codex, OpenCode)",
+        "Multi-channel support untuk multi-project",
+        "Persistent session management"
+      ],
+      "recommendations": [
+        {
+          "text": "Killer feature: jadwalkan AI task via Discord command + cron. \"disunday run task-123 at 9am\"",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi dengan cron/automation sistem Hermes Agent untuk scheduled AI tasks.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "disunday"
+    },
+    {
+      "icon": "△",
+      "name": "free-vps",
+      "path": "https://github.com/Niumination/free-vps",
+      "desc": "Project VPS gratis. Setup cloud infrastructure free tier.",
+      "tags": [
+        "VPS",
+        "Cloud",
+        "DevOps"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Project setup VPS menggunakan free tier cloud providers."
+        }
+      ],
+      "plan": [
+        "Dokumentasi lengkap free tier: Oracle, GCP, AWS, Azure",
+        "Automation script provisioning (Terraform/Ansible)",
+        "Use case: hosting AI agents, Discord bots, portal apps"
+      ],
+      "recommendations": [
+        {
+          "text": "Buat satu-click deployment script — siapa pun bisa deploy AI stack di free VPS dalam 5 menit.",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi dengan jcode/ClaudeCode untuk remote agent hosting.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "free-vps"
+    },
+    {
+      "icon": "△",
+      "name": "Free-Claude-Opus",
+      "path": "https://github.com/Niumination/Free-Claude-Opus",
+      "desc": "Akses gratis Claude Opus - eksperimen free tier AI premium.",
+      "tags": [
+        "AI",
+        "Claude",
+        "Free"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "paused",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork — eksperimen akses gratis ke Claude Opus. Metode bypass / free tier."
+        }
+      ],
+      "plan": [
+        "Evaluasi legalitas & sustainability metode",
+        "Alternatif: gunakan OpenRouter / API proxy yang legitimate"
+      ],
+      "recommendations": [
+        {
+          "text": "Risiko tinggi — metode bypass API rentan terminator akun. Migrasi ke solusi legitimate (OpenRouter, self-host).",
+          "priority": "high"
+        },
+        {
+          "text": "Dokumentasi sebagai \"AI cost optimization guide\" daripada \"free hack\".",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "Free-Claude-Opus"
+    },
+    {
+      "icon": "△",
+      "name": "Continue-Agent",
+      "path": "https://github.com/Niumination/Continue-Agent",
+      "desc": "Continue agent integration - AI coding assistant untuk editor.",
+      "tags": [
+        "AI",
+        "Continue",
+        "Agent"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "paused",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Project kosong (0KB) — ide awal untuk integrasi Continue agent."
+        }
+      ],
+      "plan": [
+        "Definisi use case: Continue sebagai local AI coding assistant",
+        "Integrasi dengan custom MCP servers"
+      ],
+      "recommendations": [
+        {
+          "text": "Butuh kickstart — define satu use case konkret dulu sebelum scale.",
+          "priority": "high"
+        }
+      ],
+      "repoName": "Continue-Agent"
+    },
+    {
+      "icon": "△",
+      "name": "cursor-free-vip",
+      "path": "https://github.com/Niumination/cursor-free-vip",
+      "desc": "Reset Cursor AI MachineID and Bypass Higher Token Limit.",
+      "tags": [
+        "Cursor",
+        "AI",
+        "VIP",
+        "Tool"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork — tool reset MachineID Cursor AI. Bypass trial limit."
+        }
+      ],
+      "plan": [
+        "Auto-update untuk mendeteksi versi Cursor terbaru",
+        "GUI wrapper (opsional) untuk non-tech users"
+      ],
+      "recommendations": [
+        {
+          "text": "High risk — melanggar ToS Cursor. Dokumentasi sebagai \"educational purposes only\" jelas.",
+          "priority": "high"
+        },
+        {
+          "text": "Buat alternatif legitimate: gunakan VSCode + Continue plugin sebagai free alternative.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "cursor-free-vip"
+    },
+    {
+      "icon": "△",
+      "name": "unlimited-claude-AI",
+      "path": "https://github.com/Niumination/unlimited-claude-AI",
+      "desc": "Claude AI unlimited - no backend, no server costs, 100% free.",
+      "tags": [
+        "AI",
+        "Claude",
+        "Free",
+        "Unlimited"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork — \"Claude AI unlimited, no backend, no server costs, 100% free\"."
+        }
+      ],
+      "plan": [
+        "Evaluasi metode yang digunakan (frontend-only bypass?)",
+        "Dokumentasi limitations & risks"
+      ],
+      "recommendations": [
+        {
+          "text": "Sama dengan Free-Claude-Opus — risiko terminator akun. Dokumentasi transparan.",
+          "priority": "high"
+        }
+      ],
+      "repoName": "unlimited-claude-AI"
+    },
+    {
+      "icon": "△",
+      "name": "Activate-Office-365",
+      "path": "https://github.com/Niumination/Activate-Office-365-on-Windows-10-11",
+      "desc": "Leverage the cloud - aktivasi Office 365 di Windows.",
+      "tags": [
+        "Office",
+        "Windows",
+        "Tool"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork — aktivasi Office 365 di Windows. Tool utility."
+        }
+      ],
+      "plan": [
+        "Update untuk Office 2026 compatibility",
+        "Auto-detection Office version + recommended activation method"
+      ],
+      "recommendations": [
+        {
+          "text": "Untuk penggunaan personal saja — tidak direkomendasikan untuk production/enterprise.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "Activate-Office-365-on-Windows-10-11"
+    },
+    {
+      "icon": "△",
+      "name": "docker-mcp-tutorial",
+      "path": "https://github.com/Niumination/docker-mcp-tutorial",
+      "desc": "Tutorial lengkap membangun MCP server dengan Docker - dari NetworkChuck.",
+      "tags": [
+        "Docker",
+        "MCP",
+        "Tutorial"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork tutorial membangun MCP server dengan Docker — dari NetworkChuck."
+        }
+      ],
+      "plan": [
+        "Translate/Praktik langsung semua contoh",
+        "Buat versi yang sudah teruji + catatan pribadi",
+        "Kustomisasi: MCP server untuk Niumination stack"
+      ],
+      "recommendations": [
+        {
+          "text": "Dokumentasi pengalaman belajar MCP — \"My MCP Journey\" jadi konten bagus untuk dev.to.",
+          "priority": "mid"
+        },
+        {
+          "text": "Implementasi MCP nyata untuk project lain (jcode, Flame-ADE) sebagai use case konkret.",
+          "priority": "high"
+        }
+      ],
+      "repoName": "docker-mcp-tutorial"
+    },
+    {
+      "icon": "△",
+      "name": "mcp-for-beginners",
+      "path": "https://github.com/Niumination/mcp-for-beginners-Microsoft",
+      "desc": "Open-source curriculum MCP fundamentals - dari Microsoft. 2GB.",
+      "tags": [
+        "MCP",
+        "Microsoft",
+        "Curriculum",
+        "AI"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork — open-source curriculum MCP fundamentals dari Microsoft. ~2GB full materials."
+        }
+      ],
+      "plan": [
+        "Studi kurikulum secara sistematis — module per module",
+        "Implementasi output: MCP server untuk tools lokal",
+        "Integrasi dengan Hermes Agent MCP client"
+      ],
+      "recommendations": [
+        {
+          "text": "Prioritas tinggi: MCP adalah standard masa depan AI-tool integration. Kuasai ini dan implementasi di project lain.",
+          "priority": "high"
+        },
+        {
+          "text": "Buat ringkasan eksekutif dari kurikulum ini — biar bisa dipahami tanpa baca semua 2GB.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "mcp-for-beginners-Microsoft"
+    },
+    {
+      "icon": "⎔",
+      "name": "Diskominfo-Web",
+      "path": "https://github.com/Niumination/Diskominfo-Web",
+      "desc": "Alternatif website Diskominfo Aceh Tengah.",
+      "tags": [
+        "Web",
+        "Kominfo",
+        "GovTech"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "paused",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Alternatif website Diskominfo Aceh Tengah. HTML + CSS."
+        }
+      ],
+      "plan": [
+        "Keputusan: lanjut sebagai redesign atau merge ke Niumination Portal",
+        "Jika lanjut: modern UI, informasi publik, berita, layanan"
+      ],
+      "recommendations": [
+        {
+          "text": "Konsolidasi dengan Niumination Portal — jangan duplikasi effort. Portal bisa serve sebagai dashboard internal sekaligus public website.",
+          "priority": "high"
+        }
+      ],
+      "repoName": "Diskominfo-Web"
+    },
+    {
+      "icon": "⎔",
+      "name": "kms-spbe",
+      "path": "https://github.com/Niumination/kms-spbe",
+      "desc": "Knowledge Management System untuk SPBE.",
+      "tags": [
+        "KMS",
+        "SPBE",
+        "GovTech"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Knowledge Management System untuk SPBE. TypeScript + React."
+        }
+      ],
+      "plan": [
+        "Knowledge base artikel & dokumentasi SPBE",
+        "Search full-text dengan tagging system",
+        "Version control untuk dokumen kebijakan",
+        "Integrasi dengan Niumination Portal"
+      ],
+      "recommendations": [
+        {
+          "text": "Gunakan dokumentasi dari ASN Workspace Knowledge Base.xlsx sebagai seed data.",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi SSO dengan portal utama — satu login untuk semua.",
+          "priority": "high"
+        }
+      ],
+      "repoName": "kms-spbe"
+    },
+    {
+      "icon": "⎔",
+      "name": "SPBE-DevOps-Academy",
+      "path": "https://github.com/Niumination/SPBE-DevOps-Academy",
+      "desc": "Akademi DevOps untuk SPBE - pembelajaran DevOps pemerintahan.",
+      "tags": [
+        "DevOps",
+        "SPBE",
+        "Academy"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "paused",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Akademi DevOps untuk implementasi SPBE. Materi pembelajaran."
+        }
+      ],
+      "plan": [
+        "Kurikulum DevOps untuk instansi pemerintah",
+        "Panduan praktis: Git, CI/CD, Docker, monitoring",
+        "Integrasi dengan kms-spbe sebagai LMS"
+      ],
+      "recommendations": [
+        {
+          "text": "Konten bagus untuk capacity building ASN. Kolaborasi dengan Diskominfo untuk internal training.",
+          "priority": "mid"
+        },
+        {
+          "text": "Buat module singkat (30 menit per module) — ASN sibuk, waktu belajar terbatas.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "SPBE-DevOps-Academy"
+    },
+    {
+      "icon": "⎔",
+      "name": "Devs-Niu",
+      "path": "https://github.com/Niumination/Devs-Niu",
+      "desc": "Developer portfolio / hub untuk semua project Niumination.",
+      "tags": [
+        "Dev",
+        "Portfolio",
+        "Hub"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Developer portfolio hub untuk semua project Niumination. Mulai dari 0KB."
+        }
+      ],
+      "plan": [
+        "Landing page untuk portfolio developer",
+        "Showcase semua project dari dashboard Niu-Dash",
+        "Integrasi GitHub API untuk live stats"
+      ],
+      "recommendations": [
+        {
+          "text": "Ini bisa jadi \"front door\" untuk semua project — yang nge-link ke Niu-Dash, Portal, Gayo Mengaji, dll.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan data dari Niu-Dash sebagai CMS — jangan duplikasi data manual.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "Devs-Niu"
+    },
+    {
+      "icon": "⎔",
+      "name": "Automata",
+      "path": "https://github.com/Niumination/Automata",
+      "desc": "Website Otomisasi Manajemen Talenta - Pranata Komputer Diskominfo.",
+      "tags": [
+        "Web",
+        "ASN",
+        "Talenta",
+        "Otomasi"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Website Otomisasi Manajemen Talenta — Pranata Komputer Terampil Diskominfo."
+        }
+      ],
+      "plan": [
+        "Sistem manajemen talenta ASN Pranata Komputer",
+        "Tracking kompetensi, sertifikasi, dan pengembangan karir",
+        "Integrasi dengan portal SPBE"
+      ],
+      "recommendations": [
+        {
+          "text": "Beda dari Niu-LKH: ini untuk talent management, bukan daily report. Jelas bedakan scope.",
+          "priority": "high"
+        },
+        {
+          "text": "Kolaborasi dengan BKPSDM Aceh Tengah untuk data riil kebutuhan ASN.",
+          "priority": "high"
+        }
+      ],
+      "repoName": "Automata"
+    },
+    {
+      "icon": "⚡",
+      "name": "Niu-Dash",
+      "path": "https://github.com/Niumination/niu-dash",
+      "desc": "Dark web glitch dashboard tracker — 105+ project terinventarisasi.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JS",
+        "Dashboard",
+        "Tracker"
+      ],
+      "date": "19 Jun 2026",
+      "website": "https://niumination.github.io/niu-dash",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "3 Jun 2026",
+          "text": "Proyek dimulai: dashboard dark web glitch theme untuk inventarisasi 75+ project Niumination."
+        },
+        {
+          "date": "3 Jun 2026",
+          "text": "DEV TRACKER dibuat — history, plan, rekomendasi untuk 25 project dev."
+        },
+        {
+          "date": "Current",
+          "text": "Three-panel nexus v2.0 — redesign total jadi 3 panel (sidebar | feed | detail)."
+        }
+      ],
+      "plan": [
+        "Hosting di GitHub Pages untuk akses online",
+        "Integrasi GitHub API untuk live stats repo (star, fork, last commit)",
+        "Auto-update project list dari GitHub API secara real-time",
+        "Filter & sort: by status, tech stack, tanggal",
+        "Mobile responsive — dashboard harus nyaman di layar HP",
+        "Search & filter: tambah filter tech stack dan status"
+      ],
+      "recommendations": [
+        {
+          "text": "Integrasi GitHub API agar project list auto-sync dengan repo — tidak perlu update manual tiap tambah repo.",
+          "priority": "high"
+        },
+        {
+          "text": "Mobile responsive — dashboard harus nyaman di layar HP karena user akses via Telegram.",
+          "priority": "high"
+        },
+        {
+          "text": "Search & filter: tambah filter tech stack dan status — biar cepat nemu project spesifik.",
+          "priority": "mid"
+        },
+        {
+          "text": "Animation performance: optimasi particle canvas untuk device dengan GPU lemah.",
+          "priority": "low"
+        }
+      ],
+      "repoName": "niu-dash"
+    },
+    {
+      "icon": "△",
+      "name": "PemdiAcehTengah",
+      "path": "https://github.com/Niumination/PemdiAcehTengah",
+      "desc": "Portal Pemetaan Proses Bisnis Aceh Tengah. Next.js + Vercel. PPB framework. 52 OPD, 4.507 ASN, 63 pages.",
+      "tags": [
+        "Next.js",
+        "GovTech",
+        "AcehTengah",
+        "Portal",
+        "Vercel"
+      ],
+      "date": "Jun 2026",
+      "website": "https://pemdi-aceh-tengah.vercel.app",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "PemdiAcehTengah"
+    },
+    {
+      "icon": "△",
+      "name": "niu-vermilion",
+      "path": "https://github.com/niumination/niu-vermilion",
+      "desc": "Second Brain Ecosystem — Knowledge Management web app. Next.js 16 + React 19 + Supabase + TipTap. 22 routes, Graph View, Notes, Tasks, Bookmarks.",
+      "tags": [
+        "Next.js",
+        "Supabase",
+        "TipTap",
+        "SecondBrain",
+        "Vercel"
+      ],
+      "date": "Jun 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "niu-vermilion"
+    },
+    {
+      "icon": "△",
+      "name": "VirtualAssistance",
+      "path": "https://github.com/Niumination/VirtualAssistance",
+      "desc": "Virtual Assistance web3 app - Next.js + TypeScript.",
+      "tags": [
+        "Next.js",
+        "Web3",
+        "TypeScript"
+      ],
+      "date": "Jun 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "VirtualAssistance"
+    },
+    {
+      "icon": "△",
+      "name": "niu-studio",
+      "path": "/Users/zaryu/Desktop/Niumination/projects/niu-studio/",
+      "desc": "Tauri + React studio app - eksperimen desktop hybrid.",
+      "tags": [
+        "Tauri",
+        "React",
+        "Desktop",
+        "Studio"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "NiuTUI",
+      "path": "/Users/zaryu/Desktop/Niumination/projects/niutui/",
+      "desc": "Rust CLI/TUI app - terminal interface untuk Niu ecosystem.",
+      "tags": [
+        "Rust",
+        "CLI",
+        "TUI"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "NiuTerm",
+      "path": "/Users/zaryu/Desktop/Niumination/projects/niuterm/",
+      "desc": "Tauri terminal emulator - niuterm v0.1.0.",
+      "tags": [
+        "Rust",
+        "Tauri",
+        "Terminal"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "niude",
+      "path": "/Users/zaryu/Desktop/Niumination/projects/niude/",
+      "desc": "Tauri app v0.1.0 - desktop app eksperimental.",
+      "tags": [
+        "Rust",
+        "Tauri",
+        "Desktop"
+      ],
+      "date": "2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "Niu-Flow",
+      "path": "/Users/zaryu/Desktop/Niumination/Niu-Flow/",
+      "desc": "Multi-agent pipeline orchestration — integrasi Hermes + JCode + Codex. Parallel ThreadPoolExecutor, GitHub auto-sync.",
+      "tags": [
+        "Python",
+        "Pipeline",
+        "Orchestrator",
+        "AI"
+      ],
+      "date": "Jun 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "JHermUSB-portable",
+      "path": "https://github.com/Niumination/JHermUSB-portable",
+      "desc": "Hermes Agent USB portable variant — cross-platform launcher, docs, scripts.",
+      "tags": [
+        "Hermes",
+        "USB",
+        "Portable",
+        "Cross-Platform"
+      ],
+      "date": "Jun 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "JHermUSB-portable"
+    },
+    {
+      "icon": "△",
+      "name": "Orchestrator",
+      "path": "/Users/zaryu/Desktop/Niumination/projects/orchestrator/",
+      "desc": "Python task orchestrator — scheduler, task queue, config JSON, logging.",
+      "tags": [
+        "Python",
+        "Scheduler",
+        "Orchestrator",
+        "Automation"
+      ],
+      "date": "Jun 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "street-racer-offline",
+      "path": "/Users/zaryu/Desktop/Niumination/aistudio-google/street-racer-offline/",
+      "desc": "Android racing game — Kotlin, Jetpack Compose, Gradle. AI Studio Google.",
+      "tags": [
+        "Android",
+        "Kotlin",
+        "Game",
+        "Compose"
+      ],
+      "date": "Jun 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "TEDEO",
+      "path": "/Users/zaryu/Desktop/Niumination/TEDEO/",
+      "desc": "Delivery Service lokal Kabupaten Aceh Tengah — Expo monorepo (mobile, web, backend, Prisma).",
+      "tags": [
+        "Expo",
+        "React Native",
+        "Monorepo",
+        "Prisma",
+        "Delivery",
+        "AcehTengah"
+      ],
+      "date": "Jun 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "Jun 2026",
+          "text": "Delivery Service lokal Aceh Tengah — Expo monorepo dimulai. Backend Prisma, mobile Expo, web Vite."
+        },
+        {
+          "date": "Current",
+          "text": "Pengembangan aktif: multi-role system (konsumen, kurir, admin), real-time tracking, pembayaran."
+        }
+      ],
+      "plan": [
+        "Selesaikan MVP: multi-delivery (makanan, dokumen, paket, belanja)",
+        "Integrasi payment gateway untuk transaksi",
+        "Real-time tracking kurir dengan WebSocket/Map",
+        "Admin dashboard dengan laporan revenue",
+        "Deploy ke Play Store + App Store",
+        "Integrasi dengan SPBE Aceh Tengah SSO"
+      ],
+      "recommendations": [
+        {
+          "text": "Prioritas tinggi — ini project real dengan target ASN/lokal Aceh Tengah. Selesaikan MVP sebelum scale.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan Expo EAS untuk CI/CD build mobile — automate release ke Play Store.",
+          "priority": "high"
+        },
+        {
+          "text": "Multi-role system harus solid dari awal: konsumen, kurir, admin — bedain akses dan view.",
+          "priority": "mid"
+        },
+        {
+          "text": "Fitur offline mode penting — daerah Aceh Tengah banyak blank spot sinyal.",
+          "priority": "high"
+        }
+      ],
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "TEDEO-Kanban",
+      "path": "https://github.com/Niumination/TEDEO-Kanban",
+      "desc": "Kanban Board untuk tracking progress TEDEO Delivery Service — Next.js PWA, drag-and-drop.",
+      "tags": [
+        "Next.js",
+        "PWA",
+        "Kanban",
+        "React",
+        "AcehTengah"
+      ],
+      "date": "Jun 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "Jun 2026",
+          "text": "Kanban Board untuk tracking development TEDEO — Next.js PWA, drag-and-drop dengan @dnd-kit."
+        }
+      ],
+      "plan": [
+        "Integrasi real-time sync dengan GitHub Projects / Issues",
+        "Export/Import board sebagai backup",
+        "Multi-board support untuk multi-project",
+        "Kolaborasi: share board dengan tim"
+      ],
+      "recommendations": [
+        {
+          "text": "Gunakan sebagai tool utama tracking TEDEO development — lebih visual daripada GitHub Projects.",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi webhook: update otomatis saat ada push/PR ke repo TEDEO.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "TEDEO-Kanban"
+    },
+    {
+      "icon": "△",
+      "name": "niu-cast",
+      "path": "https://github.com/Niumination/niu-cast",
+      "desc": "Niu Cast — Python-based project untuk Niumination ecosystem.",
+      "tags": [
+        "Python",
+        "Project",
+        "Niu"
+      ],
+      "date": "Jun 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "niu-cast"
+    },
+    {
+      "icon": "△",
+      "name": "kune-ya.com",
+      "path": "https://github.com/Niumination/kune-ya.com",
+      "desc": "Situs pribadi kune-ya.com — Next.js 15 full-stack dengan auth (next-auth), database (Prisma+PostgreSQL), middleware, dan Prisma ORM.",
+      "tags": [
+        "Next.js",
+        "Prisma",
+        "Fullstack",
+        "TypeScript",
+        "Web"
+      ],
+      "date": "6 Jun 2026",
+      "category": "dev",
+      "categoryLabel": "Development",
+      "status": "active",
+      "history": [
+        {
+          "date": "6 Jun 2026",
+          "text": "Project dimulai — Next.js 15 full-stack dengan Prisma + PostgreSQL. Fitur auth (next-auth), middleware routing, dan landing page."
+        },
+        {
+          "date": "Current",
+          "text": "Pengembangan aktif: roadmap (00-ROADMAP.md), multi-page app structure, database schema dengan Prisma."
+        }
+      ],
+      "plan": [
+        "Selesaikan fitur inti: authentication, user profiles, content management",
+        "Integrasi dengan domain kune-ya.com — deployment ke Vercel / Railway",
+        "Mobile responsive design — PWA support",
+        "SEO optimization + Open Graph metadata"
+      ],
+      "recommendations": [
+        {
+          "text": "Prioritas #1: fitur auth + database harus solid sebelum deploy publik. Keamanan data user adalah fondasi.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan Prisma migration untuk version control database — jangan edit schema manual.",
+          "priority": "high"
+        },
+        {
+          "text": "Dokumentasi struktur app dan architecture decision records (ADR) di repo README.",
+          "priority": "mid"
+        },
+        {
+          "text": "Roadmap sudah bagus — maintain transparansi progress lewat GitHub Projects.",
+          "priority": "mid"
+        }
+      ],
+      "repoName": "kune-ya.com"
+    },
+    {
+      "icon": "⎇",
+      "name": "Hackintosh ThinkPad X13",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/Niumination/Optimasi-Hackintosh-ThinkPad-X13-Yoga.md",
+      "desc": "Panduan optimasi Hackintosh ThinkPad X13 Yoga.",
+      "tags": [
+        "Hackintosh",
+        "OpenCore",
+        "macOS",
+        "Guide"
+      ],
+      "date": "7 Mei 2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "⊞",
+      "name": "Windows 11 Optimasi",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/Niumination/Optimasi-Windows11-ThinkPad-X13.md",
+      "desc": "Panduan optimasi Windows 11 ThinkPad X13 - debloat, registry, power plan.",
+      "tags": [
+        "Windows",
+        "Optimasi",
+        "Guide"
+      ],
+      "date": "7 Mei 2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "⏣",
+      "name": "MySystem - Dokumentasi",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/Niumination/MySystem.md",
+      "desc": "Spesifikasi lengkap MacBook Pro dan perangkat lain.",
+      "tags": [
+        "Dokumentasi",
+        "Hardware",
+        "System"
+      ],
+      "date": "14 Mar 2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "⌁",
+      "name": "OpenClaw - Setup Agent",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/git-clone/claw-code/",
+      "desc": "Setup OpenClaw AI agent untuk workflow coding.",
+      "tags": [
+        "AI",
+        "Agent",
+        "OpenClaw",
+        "Setup"
+      ],
+      "date": "26 Apr 2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "⎔",
+      "name": "ASN Workspace - KB",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/ASN_Workspace_Knowledge_Base.xlsx",
+      "desc": "Basis pengetahuan ASN - aplikasi, regulasi, workflow.",
+      "tags": [
+        "ASN",
+        "KB",
+        "Excel"
+      ],
+      "date": "11 Mei 2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "OpenCore EFI Configs",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/efi/",
+      "desc": "Koleksi EFI OpenCore Hackintosh - BACKUP-1574, READY-TO-UPDATE.",
+      "tags": [
+        "Hackintosh",
+        "OpenCore",
+        "EFI",
+        "Bootloader"
+      ],
+      "date": "14 Mei 2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "⌂",
+      "name": "Baca - Repo GitHub",
+      "path": "/Volumes/Niumination/Drive - ExFat/Mac-SebelumHapus/MyGit/Baca/",
+      "desc": "Repo pribadi ryu-id/Baca. Satu commit awal.",
+      "tags": [
+        "GitHub",
+        "Repo",
+        "Idea"
+      ],
+      "date": "2 Apr 2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "☆",
+      "name": "roboto_origin",
+      "path": "https://github.com/Niumination/roboto_origin",
+      "desc": "Fully Open-Source DIY Humanoid Robot - 750MB. Skala penuh, bilingual EN/CN.",
+      "tags": [
+        "Robot",
+        "Hardware",
+        "DIY",
+        "Open-Source"
+      ],
+      "date": "2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "roboto_origin"
+    },
+    {
+      "icon": "☆",
+      "name": "lmarena.github.io",
+      "path": "https://github.com/Niumination/lmarena.github.io",
+      "desc": "GitHub Pages untuk LM Arena - 320MB.",
+      "tags": [
+        "Pages",
+        "LM",
+        "Arena"
+      ],
+      "date": "2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "lmarena.github.io"
+    },
+    {
+      "icon": "△",
+      "name": "Ultra Automation System",
+      "path": "/Users/zaryu/Documents/arena.ai/ultra-automation-system/",
+      "desc": "Node.js ultra automation system - arsitektur sistem otomatis.",
+      "tags": [
+        "Node.js",
+        "Automation",
+        "System"
+      ],
+      "date": "2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "obsidian-ai-os",
+      "path": "/Users/zaryu/Desktop/Niumination/labs/obsidian-ai-os/",
+      "desc": "Obsidian AI OS — vault template + OpenCode integration untuk AI-powered knowledge management. Sudah dipindah ke labs/.",
+      "tags": [
+        "Obsidian",
+        "AI",
+        "OS",
+        "Vault"
+      ],
+      "date": "11 Jun 2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "△",
+      "name": "Flame-ADE-Desain",
+      "path": "/Users/zaryu/Desktop/Niumination/labs/flame-ade-desain/",
+      "desc": "Desain/template HTML untuk Flame ADE - mockup UI.",
+      "tags": [
+        "Design",
+        "HTML",
+        "Mockup",
+        "ADE"
+      ],
+      "date": "2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "⎇",
+      "name": "komik-seksual",
+      "path": "/Users/zaryu/Desktop/Niumination/labs/komik-seksual/",
+      "desc": "Eksperimen HTML komik ASCII — creative coding.",
+      "tags": [
+        "HTML",
+        "ASCII",
+        "Creative",
+        "Eksperimen"
+      ],
+      "date": "2026",
+      "category": "ideas",
+      "categoryLabel": "Ideas/Planning",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "☆",
+      "name": "ryu-dots",
+      "path": "https://github.com/Niumination/ryu-dots",
+      "desc": "Arch Linux config lengkap - Hyprland + Illogical Impulse.",
+      "tags": [
+        "Arch",
+        "Hyprland",
+        "Dotfiles",
+        "Linux"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "ryu-dots"
+    },
+    {
+      "icon": "☆",
+      "name": "dotfiles (1.6GB)",
+      "path": "https://github.com/Niumination/dotfiles",
+      "desc": "My Arch Dotfiles - 1.64GB full Arch config collection.",
+      "tags": [
+        "Arch",
+        "Dotfiles",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "dotfiles"
+    },
+    {
+      "icon": "☆",
+      "name": "Zaryu-HyDE (1.3GB)",
+      "path": "https://github.com/Niumination/Zaryu-HyDE",
+      "desc": "Portable re-work hyprdots. Aesthetic, dynamic, minimal - 1.3GB.",
+      "tags": [
+        "Hyprland",
+        "Dotfiles",
+        "Zaryu",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Zaryu-HyDE"
+    },
+    {
+      "icon": "☆",
+      "name": "hyprdots",
+      "path": "https://github.com/Niumination/hyprdots",
+      "desc": "Aesthetic dynamic dots untuk Arch Hyprland - 1GB.",
+      "tags": [
+        "Hyprland",
+        "Dotfiles",
+        "Aesthetic"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "hyprdots"
+    },
+    {
+      "icon": "☆",
+      "name": "ZaryuHive",
+      "path": "https://github.com/Niumination/ZaryuHive",
+      "desc": "Zaryu Hive - environment config.",
+      "tags": [
+        "Config",
+        "Zaryu",
+        "Hive"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "ZaryuHive"
+    },
+    {
+      "icon": "☆",
+      "name": "RyuDE",
+      "path": "https://github.com/Niumination/RyuDE",
+      "desc": "Personal Desktop Environment based on HyDE-Project - C++.",
+      "tags": [
+        "Hyprland",
+        "DE",
+        "C++",
+        "Ryu"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "RyuDE"
+    },
+    {
+      "icon": "☆",
+      "name": "ryuland",
+      "path": "https://github.com/Niumination/ryuland",
+      "desc": "Hyprland ecosystem dots - modern, useful, halal.",
+      "tags": [
+        "Hyprland",
+        "Dotfiles",
+        "Islamic",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "ryuland"
+    },
+    {
+      "icon": "☆",
+      "name": "ryuland-dotfiles",
+      "path": "https://github.com/Niumination/ryuland-dotfiles",
+      "desc": "Rice built for usability - Hyprland config.",
+      "tags": [
+        "Hyprland",
+        "Rice",
+        "Dotfiles"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "ryuland-dotfiles"
+    },
+    {
+      "icon": "☆",
+      "name": "ryushell",
+      "path": "https://github.com/Niumination/ryushell",
+      "desc": "Shell config - No waybar here! - GPL-3.0.",
+      "tags": [
+        "Shell",
+        "Config",
+        "Waybar"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "ryushell"
+    },
+    {
+      "icon": "☆",
+      "name": "AnachonisticHypr",
+      "path": "https://github.com/Niumination/AnachonisticHypr",
+      "desc": "Anachronistic Hyprland config - Shell.",
+      "tags": [
+        "Hyprland",
+        "Shell",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "AnachonisticHypr"
+    },
+    {
+      "icon": "☆",
+      "name": "hive-dotfiles",
+      "path": "https://github.com/Niumination/hive-dotfiles",
+      "desc": "Hive dotfiles - CSS config.",
+      "tags": [
+        "Dotfiles",
+        "CSS",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "hive-dotfiles"
+    },
+    {
+      "icon": "☆",
+      "name": "Axenide-Dotfiles",
+      "path": "https://github.com/Niumination/Axenide-Dotfiles",
+      "desc": "Axenide dotfiles - 450MB.",
+      "tags": [
+        "Dotfiles",
+        "Config",
+        "Fork"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Axenide-Dotfiles"
+    },
+    {
+      "icon": "☆",
+      "name": "Hyde-cli",
+      "path": "https://github.com/Niumination/Hyde-cli",
+      "desc": "HyDE CLI wrapper, tweaks, workarounds.",
+      "tags": [
+        "HyDE",
+        "CLI",
+        "Wrapper"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Hyde-cli"
+    },
+    {
+      "icon": "☆",
+      "name": "hyprfloat",
+      "path": "https://github.com/Niumination/hyprfloat",
+      "desc": "Hyprland floating WM + workspace overview utility.",
+      "tags": [
+        "Hyprland",
+        "Floating",
+        "WM"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "hyprfloat"
+    },
+    {
+      "icon": "☆",
+      "name": "hyprnix",
+      "path": "https://github.com/Niumination/hyprnix",
+      "desc": "Hyprland Nix config - Nix language.",
+      "tags": [
+        "Nix",
+        "Hyprland",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "hyprnix"
+    },
+    {
+      "icon": "☆",
+      "name": "kaizen",
+      "path": "https://github.com/Niumination/kaizen",
+      "desc": "Productive desktop environment setup.",
+      "tags": [
+        "Desktop",
+        "Productivity",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "kaizen"
+    },
+    {
+      "icon": "☆",
+      "name": "matt-dotfiles",
+      "path": "https://github.com/Niumination/matt-dotfiles",
+      "desc": "Yet another aesthetic Hyprland Config.",
+      "tags": [
+        "Hyprland",
+        "Aesthetic",
+        "Dotfiles"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "matt-dotfiles"
+    },
+    {
+      "icon": "☆",
+      "name": "agsv1-hyprpanel",
+      "path": "https://github.com/Niumination/agsv1-hyprpanel",
+      "desc": "AGS v1 Hyprpanel - TypeScript.",
+      "tags": [
+        "AGS",
+        "Hyprpanel",
+        "TypeScript"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "agsv1-hyprpanel"
+    },
+    {
+      "icon": "☆",
+      "name": "win11-dotfiles",
+      "path": "https://github.com/Niumination/win11-dotfiles",
+      "desc": "Windows 11 dotfiles and config - CSS.",
+      "tags": [
+        "Windows",
+        "Dotfiles",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "win11-dotfiles"
+    },
+    {
+      "icon": "☆",
+      "name": "Windots",
+      "path": "https://github.com/Niumination/Windots",
+      "desc": "Koleksi Windows dotfiles and configs pribadi.",
+      "tags": [
+        "Windows",
+        "Dotfiles",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": "Windots"
+    },
+    {
+      "icon": "☆",
+      "name": ".local dotfiles",
+      "path": "/Users/zaryu/.local/src/dotfiles/",
+      "desc": "Dotfiles lokal - mirror config symlinked dari berbagai proyek.",
+      "tags": [
+        "Dotfiles",
+        "Local",
+        "Config"
+      ],
+      "date": "2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "🧠",
+      "name": "Second Brain",
+      "path": "/Users/zaryu/Desktop/Niumination/brain/_index.md",
+      "desc": "Obsidian vault pribadi — daily capture, catatan proyek, riset. HEAD 9391ef5. 66 repositori di DOX.",
+      "tags": [
+        "Obsidian",
+        "Vault",
+        "Knowledge",
+        "SecondBrain",
+        "DOX"
+      ],
+      "date": "11 Jun 2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "☆",
+      "name": "zaryu-terminal-dotfiles",
+      "path": "/Users/zaryu/Desktop/Niumination/rekap/zaryu-terminal-dotfiles/",
+      "desc": "Terminal dotfiles stow-managed — Zsh, Neovim, Tmux, Git, Starship, Node, Ruby, ASDF.",
+      "tags": [
+        "Terminal",
+        "Dotfiles",
+        "Zsh",
+        "Neovim",
+        "Stow"
+      ],
+      "date": "Jun 2026",
+      "category": "config",
+      "categoryLabel": "Config/Dotfiles",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "◇",
+      "name": "Claude-Free-Project (LEAK)",
+      "path": "/Volumes/Niumination/BACKUP/WINDOWS11/PROJECT'S/Claude-Free-Project (LEAK)/",
+      "desc": "Static HTML website dari backup Windows - eksperimen Claude Free.",
+      "tags": [
+        "HTML",
+        "Backup",
+        "Legacy"
+      ],
+      "date": "2026",
+      "category": "legacy",
+      "categoryLabel": "Legacy/Arsip",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "◇",
+      "name": "Portal Pemdi (Desktop)",
+      "path": "/Volumes/Niumination/BACKUP/WINDOWS11/PROJECT'S/Project PEMDI - Claude Desktop (FreeAccount)/Portal Pemdi/Portal-Pemdi/",
+      "desc": "Vite + React portal Pemdi versi awal - backup Windows.",
+      "tags": [
+        "React",
+        "Vite",
+        "Pemdi",
+        "Backup"
+      ],
+      "date": "2026",
+      "category": "legacy",
+      "categoryLabel": "Legacy/Arsip",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "◇",
+      "name": "DropBeam Flutter",
+      "path": "/Volumes/Niumination/BACKUP/WINDOWS11/PROJECT'S/Project DropBeam - Claude/dropbeam-production/dropbeam-flutter/",
+      "desc": "Flutter mobile app - project DropBeam (backup Windows).",
+      "tags": [
+        "Flutter",
+        "Mobile",
+        "Backup"
+      ],
+      "date": "2026",
+      "category": "legacy",
+      "categoryLabel": "Legacy/Arsip",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "◇",
+      "name": "DropBeam Server",
+      "path": "/Volumes/Niumination/BACKUP/WINDOWS11/PROJECT'S/Project DropBeam - Claude/dropbeam-production/dropbeam-server/",
+      "desc": "Node.js backend untuk DropBeam (backup Windows).",
+      "tags": [
+        "Node.js",
+        "Backend",
+        "Backup"
+      ],
+      "date": "2026",
+      "category": "legacy",
+      "categoryLabel": "Legacy/Arsip",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "◇",
+      "name": "jcode-docs",
+      "path": "/Users/zaryu/Desktop/Niumination/archive/jcode-docs/",
+      "desc": "Dokumentasi JCode - referensi coding agent framework.",
+      "tags": [
+        "Docs",
+        "JCode",
+        "Reference"
+      ],
+      "date": "2026",
+      "category": "legacy",
+      "categoryLabel": "Legacy/Arsip",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "◇",
+      "name": "Hermes-USB-Portable",
+      "path": "/Users/zaryu/Music/Devs/Hermes-USB-Portable-main/",
+      "desc": "Dokumentasi portable Hermes Agent USB.",
+      "tags": [
+        "Docs",
+        "Hermes",
+        "Portable"
+      ],
+      "date": "2026",
+      "category": "legacy",
+      "categoryLabel": "Legacy/Arsip",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    },
+    {
+      "icon": "◇",
+      "name": "xero-dotfiles-docs",
+      "path": "/Users/zaryu/Desktop/Niumination/archive/xero-dotfiles-docs/",
+      "desc": "Dokumentasi Xero dotfiles - referensi tema/ricing.",
+      "tags": [
+        "Docs",
+        "Dotfiles",
+        "Xero",
+        "Reference"
+      ],
+      "date": "2026",
+      "category": "legacy",
+      "categoryLabel": "Legacy/Arsip",
+      "status": null,
+      "history": null,
+      "plan": null,
+      "recommendations": null,
+      "repoName": null
+    }
+  ],
+  "devMeta": {
+    "Flame-ADE": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026 — Q1",
+          "text": "Konsep awal: AI-native terminal emulator sub-10MB. Ide dari frustrasi dengan bloat IDE modern."
+        },
+        {
+          "date": "2026 — Q2",
+          "text": "Prototype Tauri 2 + Rust + React 19. BYOK AI, OS keychain, zero telemetry. Target macOS Tahoe 26.5."
+        },
+        {
+          "date": "2026 — Current",
+          "text": "Pengembangan core terminal emulator. Integrasi multi-provider LLM (OpenAI, Anthropic, OpenRouter)."
+        }
+      ],
+      "plan": [
+        "Selesaikan core terminal rendering (Rust + webview)",
+        "Plugin system untuk ekstensi AI custom",
+        "Multi-session tabs + session persistence",
+        "Package manager built-in (niupkg?)",
+        "Rilis alpha — public beta di GitHub Releases"
+      ],
+      "recommendations": [
+        {
+          "text": "Fokus konsolidasi: Flame-ADE dan terax-ai punya overlap ~70%. Gabung atau bedakan use case secara tegas.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan GitHub Projects / Milestones untuk tracking progress publik — biar kontributor tertarik.",
+          "priority": "high"
+        },
+        {
+          "text": "Siapkan documentation-first approach: ARCHITECTURE.md + CONTRIBUTING.md sebelum rilis publik.",
+          "priority": "mid"
+        },
+        {
+          "text": "Benchmark performa vs Warp, Hyper, iTerm2 — publikasikan hasilnya sebagai blog post / dev.to.",
+          "priority": "low"
+        }
+      ]
+    },
+    "terax-ai": {
+      "status": "paused",
+      "history": [
+        {
+          "date": "2026 — Q1",
+          "text": "Terinspirasi dari proyek ADE open-source. Mulai sebagai eksperimen lightweight terminal."
+        },
+        {
+          "date": "2026 — Q2",
+          "text": "Berhasil mencapai ~7MB binary size. Stack Rust + Tauri + React. Fitur dasar typing + output rendering."
+        },
+        {
+          "date": "2026 — Current",
+          "text": "Ditunda — fokus dialihkan ke Flame-ADE yang lebih mature secara arsitektur."
+        }
+      ],
+      "plan": [
+        "Keputusan: merge ke Flame-ADE atau jalan sendiri sebagai minimal edition",
+        "Jika jalan sendiri: fokus sebagai lightweight demo / POC untuk ADE concept",
+        "Jika merge: port fitur unik (jika ada) ke Flame-ADE"
+      ],
+      "recommendations": [
+        {
+          "text": "Evaluasi make-or-break: 2 proyek ADE parallel menghabiskan energi. Dokumentasi perbedaan teknis, lalu ambil keputusan.",
+          "priority": "high"
+        },
+        {
+          "text": "Jika dipertahankan, positioning sebagai \"ADE lite\" untuk resource-constrained environment (VPS, Raspberry Pi).",
+          "priority": "mid"
+        }
+      ]
+    },
+    "flame-code": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026 — Q1",
+          "text": "\"My First Build, Using AI\" — proyek pertama yang fully dibangun dengan bantuan AI coding agent."
+        },
+        {
+          "date": "2026 — Q2",
+          "text": "Eksperimen dengan Cursor, Claude Code, dan ContinueDev. Belajar pattern AI-assisted development."
+        },
+        {
+          "date": "2026 — Current",
+          "text": "Iterasi cepat: terus bereksperimen dengan berbagai pendekatan AI coding."
+        }
+      ],
+      "plan": [
+        "Dokumentasi perjalanan: write-up tentang apa yang berhasil vs tidak dalam AI-assisted coding",
+        "Template boilerplate untuk rapid prototyping dengan AI",
+        "Benchmark berbagai AI coding tools (Cursor, Claude Code, Copilot, Continue)"
+      ],
+      "recommendations": [
+        {
+          "text": "Transformasi menjadi blog/series: \"My First Build\" punya nilai storytelling tinggi. Publikasikan sebagai artikel dev.to, Twitter thread.",
+          "priority": "high"
+        },
+        {
+          "text": "Buat repo template dari hasil eksperimen — biar orang lain bisa reproduce learning path yang sama.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "jcode": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026 — Q1",
+          "text": "Ide Coding Agent Harness — framework untuk orchestrasi AI coding agents."
+        },
+        {
+          "date": "2026 — Q2",
+          "text": "Prototyping multi-agent workflow. Integrasi dengan local LLM + cloud API."
+        }
+      ],
+      "plan": [
+        "Definisi API: agent input/output protocol",
+        "Plugin system untuk custom tools & MCP server integration",
+        "Integrasi langsung dengan Flame-ADE sebagai agent engine"
+      ],
+      "recommendations": [
+        {
+          "text": "Aliansi dengan ClaudeCode/claw-code — jangan buat ulang yang sudah ada. Fork dan extend.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan MCP (Model Context Protocol) sebagai standard agent-tool communication.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "skills": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026 — Q2",
+          "text": "Direktori skills Claude Code dari .claude — dibagikan sebagai open-source. Skills for Real Engineers."
+        }
+      ],
+      "plan": [
+        "Kurasi skills yang benar-benar reusable",
+        "Dokumentasi cara pakai setiap skill",
+        "Integrasi dengan jcode sebagai skill registry default",
+        "Community contributions via PR"
+      ],
+      "recommendations": [
+        {
+          "text": "Buat skill template + validator agar kontribusi community terstandarisasi.",
+          "priority": "high"
+        },
+        {
+          "text": "Host GitHub Pages sebagai skill marketplace / searchable registry.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "ClaudeCode / claw-code": {
+      "status": "staging",
+      "history": [
+        {
+          "date": "26 Apr 2026",
+          "text": "Fork pertama dari claudecode (soongenwong) — eksplorasi multi-agent system."
+        },
+        {
+          "date": "2026 — Mei",
+          "text": "Clone kedua dari ultraworkers/claw-code — pendekatan berbeda, Rust-based."
+        },
+        {
+          "date": "2026 — Current",
+          "text": "Dua fork berbeda sumber. Eksplorasi multi-provider LLM, multi-agent Python."
+        }
+      ],
+      "plan": [
+        "Pilih satu fork sebagai base code — atau merge feature dari keduanya",
+        "Dockerize untuk portabilitas lintas OS",
+        "Integrasi dengan disunday (Discord controller) untuk remote agent management"
+      ],
+      "recommendations": [
+        {
+          "text": "Konsolidasi: dua fork claudecode/claw-code membingungkan. Pilih satu primary, archive yang lain.",
+          "priority": "high"
+        },
+        {
+          "text": "Containerize + publish ke Docker Hub — biar bisa run di VPS / server manapun.",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi dengan Niumination Portal sebagai backend agent manager.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "disunday": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026 — Q2",
+          "text": "Fork dari disunday — Discord bridge untuk opencode. Kontrol AI coding via Discord."
+        }
+      ],
+      "plan": [
+        "Bridge ke semua AI coding tool yang dipakai (Claude Code, Codex, OpenCode)",
+        "Multi-channel support untuk multi-project",
+        "Persistent session management"
+      ],
+      "recommendations": [
+        {
+          "text": "Killer feature: jadwalkan AI task via Discord command + cron. \"disunday run task-123 at 9am\"",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi dengan cron/automation sistem Hermes Agent untuk scheduled AI tasks.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "G0DM0D3": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork project — \"LIBERATED AI CHAT\". Eksperimen dengan mode AI chat unrestricted."
+        }
+      ],
+      "plan": [
+        "Self-host option dengan local LLM (llama.cpp, Ollama)",
+        "Multi-model routing: uncensored local + censored cloud"
+      ],
+      "recommendations": [
+        {
+          "text": "Bedakan positioning dari AI chat mainstream — fokus ke developer use case (code generation tanpa filter).",
+          "priority": "mid"
+        }
+      ]
+    },
+    "free-vps": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Project setup VPS menggunakan free tier cloud providers."
+        }
+      ],
+      "plan": [
+        "Dokumentasi lengkap free tier: Oracle, GCP, AWS, Azure",
+        "Automation script provisioning (Terraform/Ansible)",
+        "Use case: hosting AI agents, Discord bots, portal apps"
+      ],
+      "recommendations": [
+        {
+          "text": "Buat satu-click deployment script — siapa pun bisa deploy AI stack di free VPS dalam 5 menit.",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi dengan jcode/ClaudeCode untuk remote agent hosting.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "Free-Claude-Opus": {
+      "status": "paused",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork — eksperimen akses gratis ke Claude Opus. Metode bypass / free tier."
+        }
+      ],
+      "plan": [
+        "Evaluasi legalitas & sustainability metode",
+        "Alternatif: gunakan OpenRouter / API proxy yang legitimate"
+      ],
+      "recommendations": [
+        {
+          "text": "Risiko tinggi — metode bypass API rentan terminator akun. Migrasi ke solusi legitimate (OpenRouter, self-host).",
+          "priority": "high"
+        },
+        {
+          "text": "Dokumentasi sebagai \"AI cost optimization guide\" daripada \"free hack\".",
+          "priority": "mid"
+        }
+      ]
+    },
+    "Continue-Agent": {
+      "status": "paused",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Project kosong (0KB) — ide awal untuk integrasi Continue agent."
+        }
+      ],
+      "plan": [
+        "Definisi use case: Continue sebagai local AI coding assistant",
+        "Integrasi dengan custom MCP servers"
+      ],
+      "recommendations": [
+        {
+          "text": "Butuh kickstart — define satu use case konkret dulu sebelum scale.",
+          "priority": "high"
+        }
+      ]
+    },
+    "cursor-free-vip": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork — tool reset MachineID Cursor AI. Bypass trial limit."
+        }
+      ],
+      "plan": [
+        "Auto-update untuk mendeteksi versi Cursor terbaru",
+        "GUI wrapper (opsional) untuk non-tech users"
+      ],
+      "recommendations": [
+        {
+          "text": "High risk — melanggar ToS Cursor. Dokumentasi sebagai \"educational purposes only\" jelas.",
+          "priority": "high"
+        },
+        {
+          "text": "Buat alternatif legitimate: gunakan VSCode + Continue plugin sebagai free alternative.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "unlimited-claude-AI": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork — \"Claude AI unlimited, no backend, no server costs, 100% free\"."
+        }
+      ],
+      "plan": [
+        "Evaluasi metode yang digunakan (frontend-only bypass?)",
+        "Dokumentasi limitations & risks"
+      ],
+      "recommendations": [
+        {
+          "text": "Sama dengan Free-Claude-Opus — risiko terminator akun. Dokumentasi transparan.",
+          "priority": "high"
+        }
+      ]
+    },
+    "Activate-Office-365": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork — aktivasi Office 365 di Windows. Tool utility."
+        }
+      ],
+      "plan": [
+        "Update untuk Office 2026 compatibility",
+        "Auto-detection Office version + recommended activation method"
+      ],
+      "recommendations": [
+        {
+          "text": "Untuk penggunaan personal saja — tidak direkomendasikan untuk production/enterprise.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "docker-mcp-tutorial": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork tutorial membangun MCP server dengan Docker — dari NetworkChuck."
+        }
+      ],
+      "plan": [
+        "Translate/Praktik langsung semua contoh",
+        "Buat versi yang sudah teruji + catatan pribadi",
+        "Kustomisasi: MCP server untuk Niumination stack"
+      ],
+      "recommendations": [
+        {
+          "text": "Dokumentasi pengalaman belajar MCP — \"My MCP Journey\" jadi konten bagus untuk dev.to.",
+          "priority": "mid"
+        },
+        {
+          "text": "Implementasi MCP nyata untuk project lain (jcode, Flame-ADE) sebagai use case konkret.",
+          "priority": "high"
+        }
+      ]
+    },
+    "mcp-for-beginners": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Fork — open-source curriculum MCP fundamentals dari Microsoft. ~2GB full materials."
+        }
+      ],
+      "plan": [
+        "Studi kurikulum secara sistematis — module per module",
+        "Implementasi output: MCP server untuk tools lokal",
+        "Integrasi dengan Hermes Agent MCP client"
+      ],
+      "recommendations": [
+        {
+          "text": "Prioritas tinggi: MCP adalah standard masa depan AI-tool integration. Kuasai ini dan implementasi di project lain.",
+          "priority": "high"
+        },
+        {
+          "text": "Buat ringkasan eksekutif dari kurikulum ini — biar bisa dipahami tanpa baca semua 2GB.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "Gayo Mengaji": {
+      "status": "active",
+      "history": [
+        {
+          "date": "5 Apr 2026",
+          "text": "Project dimulai. Dokumentasi resmi sistem dibuat."
+        },
+        {
+          "date": "14 Apr 2026",
+          "text": "Roadmap lengkap: Gayo Mengaji Roadmap — 4 Section."
+        },
+        {
+          "date": "20 Apr 2026",
+          "text": "Implementation plan selesai. Design screens di Figma."
+        },
+        {
+          "date": "Apr 2026",
+          "text": "Section 1 selesai: landing page, login, dan fitur dasar. Hosting di Vercel + Railway."
+        },
+        {
+          "date": "Mei 2026",
+          "text": "Workflow tracking aktif — development berjalan. Target: ASN Aceh Tengah sebagai user base."
+        }
+      ],
+      "plan": [
+        "Section 2: Dashboard utama + tilawah harian + setoran hafalan",
+        "Section 3: Fitur peringkat, laporan, notifikasi",
+        "Section 4: Admin dashboard, monitoring, ekspor data",
+        "Integrasi dengan SPBE Aceh Tengah (SSO, data ASN)",
+        "Deploy ke Play Store + App Store untuk ASN",
+        "Mode offline untuk daerah tanpa sinyal"
+      ],
+      "recommendations": [
+        {
+          "text": "Prioritas #1: ini project paling konkret dengan user real (ASN Aceh Tengah). Alokasi waktu terbanyak.",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi SPBE SSO harus dari awal — jangan retrofit. Biar terintegrasi dengan ekosistem Diskominfo.",
+          "priority": "high"
+        },
+        {
+          "text": "Flutter untuk cross-platform (Android+iOS) — pastikan build untuk dua platform sekaligus.",
+          "priority": "high"
+        },
+        {
+          "text": "Gamification: leaderboard ASN, badge tilawah, streak — boost engagement.",
+          "priority": "mid"
+        },
+        {
+          "text": "Backup data offline dengan SQLite sync ke PostgreSQL — untuk daerah pelosok Aceh Tengah.",
+          "priority": "high"
+        }
+      ]
+    },
+    "Niumination Portal (Fullstack)": {
+      "status": "active",
+      "history": [
+        {
+          "date": "28 Apr 2026",
+          "text": "Project dimulai. Frontend React+Vite, backend Node.js/Express."
+        },
+        {
+          "date": "Apr-Mei 2026",
+          "text": "Dashboard IPD, task tracker, SPBE module. NiuDesign system (DESIGN-linear.app.md)."
+        },
+        {
+          "date": "Current",
+          "text": "Lanjut development — perlu penyelesaian fitur core."
+        }
+      ],
+      "plan": [
+        "Complete dashboard IPD dengan real data",
+        "User management + role-based access control (RBAC)",
+        "Task management dengan assignee + deadline",
+        "SPBE module: evaluasi, rekap, laporan",
+        "Arsip dokumen + search",
+        "Responsive untuk mobile"
+      ],
+      "recommendations": [
+        {
+          "text": "Prioritas #2: portal ini jadi wajah digital Diskominfo. Selesaikan fitur inti sebelum tambah fitur baru.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan React Query / TanStack Query untuk state management — kurangi boilerplate.",
+          "priority": "mid"
+        },
+        {
+          "text": "Implementasi role-based access (Admin, OPD, ASN) dari awal — retrofit RBAC itu sakit.",
+          "priority": "high"
+        },
+        {
+          "text": "Dockerize untuk deployment mudah ke VPS / server Diskominfo.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "kms-spbe": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Knowledge Management System untuk SPBE. TypeScript + React."
+        }
+      ],
+      "plan": [
+        "Knowledge base artikel & dokumentasi SPBE",
+        "Search full-text dengan tagging system",
+        "Version control untuk dokumen kebijakan",
+        "Integrasi dengan Niumination Portal"
+      ],
+      "recommendations": [
+        {
+          "text": "Gunakan dokumentasi dari ASN Workspace Knowledge Base.xlsx sebagai seed data.",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi SSO dengan portal utama — satu login untuk semua.",
+          "priority": "high"
+        }
+      ]
+    },
+    "SPBE-DevOps-Academy": {
+      "status": "paused",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Akademi DevOps untuk implementasi SPBE. Materi pembelajaran."
+        }
+      ],
+      "plan": [
+        "Kurikulum DevOps untuk instansi pemerintah",
+        "Panduan praktis: Git, CI/CD, Docker, monitoring",
+        "Integrasi dengan kms-spbe sebagai LMS"
+      ],
+      "recommendations": [
+        {
+          "text": "Konten bagus untuk capacity building ASN. Kolaborasi dengan Diskominfo untuk internal training.",
+          "priority": "mid"
+        },
+        {
+          "text": "Buat module singkat (30 menit per module) — ASN sibuk, waktu belajar terbatas.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "Diskominfo-Web": {
+      "status": "paused",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Alternatif website Diskominfo Aceh Tengah. HTML + CSS."
+        }
+      ],
+      "plan": [
+        "Keputusan: lanjut sebagai redesign atau merge ke Niumination Portal",
+        "Jika lanjut: modern UI, informasi publik, berita, layanan"
+      ],
+      "recommendations": [
+        {
+          "text": "Konsolidasi dengan Niumination Portal — jangan duplikasi effort. Portal bisa serve sebagai dashboard internal sekaligus public website.",
+          "priority": "high"
+        }
+      ]
+    },
+    "Devs-Niu": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Developer portfolio hub untuk semua project Niumination. Mulai dari 0KB."
+        }
+      ],
+      "plan": [
+        "Landing page untuk portfolio developer",
+        "Showcase semua project dari dashboard Niu-Dash",
+        "Integrasi GitHub API untuk live stats"
+      ],
+      "recommendations": [
+        {
+          "text": "Ini bisa jadi \"front door\" untuk semua project — yang nge-link ke Niu-Dash, Portal, Gayo Mengaji, dll.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan data dari Niu-Dash sebagai CMS — jangan duplikasi data manual.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "Automata": {
+      "status": "active",
+      "history": [
+        {
+          "date": "2026",
+          "text": "Website Otomisasi Manajemen Talenta — Pranata Komputer Terampil Diskominfo."
+        }
+      ],
+      "plan": [
+        "Sistem manajemen talenta ASN Pranata Komputer",
+        "Tracking kompetensi, sertifikasi, dan pengembangan karir",
+        "Integrasi dengan portal SPBE"
+      ],
+      "recommendations": [
+        {
+          "text": "Beda dari Niu-LKH: ini untuk talent management, bukan daily report. Jelas bedakan scope.",
+          "priority": "high"
+        },
+        {
+          "text": "Kolaborasi dengan BKPSDM Aceh Tengah untuk data riil kebutuhan ASN.",
+          "priority": "high"
+        }
+      ]
+    },
+    "Niu-Dash": {
+      "status": "active",
+      "history": [
+        {
+          "date": "3 Jun 2026",
+          "text": "Proyek dimulai: dashboard dark web glitch theme untuk inventarisasi 75+ project Niumination."
+        },
+        {
+          "date": "3 Jun 2026",
+          "text": "DEV TRACKER dibuat — history, plan, rekomendasi untuk 25 project dev."
+        },
+        {
+          "date": "Current",
+          "text": "Three-panel nexus v2.0 — redesign total jadi 3 panel (sidebar | feed | detail)."
+        }
+      ],
+      "plan": [
+        "Hosting di GitHub Pages untuk akses online",
+        "Integrasi GitHub API untuk live stats repo (star, fork, last commit)",
+        "Auto-update project list dari GitHub API secara real-time",
+        "Filter & sort: by status, tech stack, tanggal",
+        "Mobile responsive — dashboard harus nyaman di layar HP",
+        "Search & filter: tambah filter tech stack dan status"
+      ],
+      "recommendations": [
+        {
+          "text": "Integrasi GitHub API agar project list auto-sync dengan repo — tidak perlu update manual tiap tambah repo.",
+          "priority": "high"
+        },
+        {
+          "text": "Mobile responsive — dashboard harus nyaman di layar HP karena user akses via Telegram.",
+          "priority": "high"
+        },
+        {
+          "text": "Search & filter: tambah filter tech stack dan status — biar cepat nemu project spesifik.",
+          "priority": "mid"
+        },
+        {
+          "text": "Animation performance: optimasi particle canvas untuk device dengan GPU lemah.",
+          "priority": "low"
+        }
+      ]
+    },
+    "TEDEO": {
+      "status": "active",
+      "history": [
+        {
+          "date": "Jun 2026",
+          "text": "Delivery Service lokal Aceh Tengah — Expo monorepo dimulai. Backend Prisma, mobile Expo, web Vite."
+        },
+        {
+          "date": "Current",
+          "text": "Pengembangan aktif: multi-role system (konsumen, kurir, admin), real-time tracking, pembayaran."
+        }
+      ],
+      "plan": [
+        "Selesaikan MVP: multi-delivery (makanan, dokumen, paket, belanja)",
+        "Integrasi payment gateway untuk transaksi",
+        "Real-time tracking kurir dengan WebSocket/Map",
+        "Admin dashboard dengan laporan revenue",
+        "Deploy ke Play Store + App Store",
+        "Integrasi dengan SPBE Aceh Tengah SSO"
+      ],
+      "recommendations": [
+        {
+          "text": "Prioritas tinggi — ini project real dengan target ASN/lokal Aceh Tengah. Selesaikan MVP sebelum scale.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan Expo EAS untuk CI/CD build mobile — automate release ke Play Store.",
+          "priority": "high"
+        },
+        {
+          "text": "Multi-role system harus solid dari awal: konsumen, kurir, admin — bedain akses dan view.",
+          "priority": "mid"
+        },
+        {
+          "text": "Fitur offline mode penting — daerah Aceh Tengah banyak blank spot sinyal.",
+          "priority": "high"
+        }
+      ]
+    },
+    "TEDEO-Kanban": {
+      "status": "active",
+      "history": [
+        {
+          "date": "Jun 2026",
+          "text": "Kanban Board untuk tracking development TEDEO — Next.js PWA, drag-and-drop dengan @dnd-kit."
+        }
+      ],
+      "plan": [
+        "Integrasi real-time sync dengan GitHub Projects / Issues",
+        "Export/Import board sebagai backup",
+        "Multi-board support untuk multi-project",
+        "Kolaborasi: share board dengan tim"
+      ],
+      "recommendations": [
+        {
+          "text": "Gunakan sebagai tool utama tracking TEDEO development — lebih visual daripada GitHub Projects.",
+          "priority": "high"
+        },
+        {
+          "text": "Integrasi webhook: update otomatis saat ada push/PR ke repo TEDEO.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "kune-ya.com": {
+      "status": "active",
+      "history": [
+        {
+          "date": "6 Jun 2026",
+          "text": "Project dimulai — Next.js 15 full-stack dengan Prisma + PostgreSQL. Fitur auth (next-auth), middleware routing, dan landing page."
+        },
+        {
+          "date": "Current",
+          "text": "Pengembangan aktif: roadmap (00-ROADMAP.md), multi-page app structure, database schema dengan Prisma."
+        }
+      ],
+      "plan": [
+        "Selesaikan fitur inti: authentication, user profiles, content management",
+        "Integrasi dengan domain kune-ya.com — deployment ke Vercel / Railway",
+        "Mobile responsive design — PWA support",
+        "SEO optimization + Open Graph metadata"
+      ],
+      "recommendations": [
+        {
+          "text": "Prioritas #1: fitur auth + database harus solid sebelum deploy publik. Keamanan data user adalah fondasi.",
+          "priority": "high"
+        },
+        {
+          "text": "Gunakan Prisma migration untuk version control database — jangan edit schema manual.",
+          "priority": "high"
+        },
+        {
+          "text": "Dokumentasi struktur app dan architecture decision records (ADR) di repo README.",
+          "priority": "mid"
+        },
+        {
+          "text": "Roadmap sudah bagus — maintain transparansi progress lewat GitHub Projects.",
+          "priority": "mid"
+        }
+      ]
+    },
+    "niu-private": {
+      "status": "active",
+      "history": [
+        {
+          "date": "6 Jun 2026",
+          "text": "Project dimulai — document vault & kanban project board untuk dokumentasi pribadi. TypeScript, deployment GH Pages."
+        }
+      ],
+      "plan": [
+        "Dokumentasi vault: struktur folder, template, workflow untuk semua project Niumination",
+        "Kanban board: tracking task & progress per project",
+        "Integrasi dengan Niu-Dash sebagai data source",
+        "Search + tagging system untuk dokumentasi"
+      ],
+      "recommendations": [
+        {
+          "text": "Jadikan sebagai single source of truth untuk dokumentasi — semua project punya entry di sini.",
+          "priority": "high"
+        },
+        {
+          "text": "Kanban bisa integrasi dengan GitHub Projects via API — auto-sync task dari repo.",
+          "priority": "mid"
+        }
+      ]
+    }
+  }
+}
